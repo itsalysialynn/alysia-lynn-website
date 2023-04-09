@@ -16,7 +16,7 @@
     "typescript": "tsc --noEmit",
     "lint": "eslint src",
     "prettier": "prettier --check .",
-    "test": "jest --coverage"
+    "test": "jest --coverage --passWithNoTests"
   },
   "dependencies": {
     "@mdx-js/react": "^2.3.0",
