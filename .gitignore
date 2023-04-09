@@ -1,0 +1,25 @@
+# Generated files
+.eslintcache
+.cache/
+public
+src/gatsby-types.d.ts
+target/
+reports/
+coverage/
+
+# Library folders
+node_modules/
+
+# System generated files
+.DS_Store
+.idea/
+.vscode/
+
+# Yarn files https://yarnpkg.com/getting-started/qa#which-files-should-be-gitignored
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
