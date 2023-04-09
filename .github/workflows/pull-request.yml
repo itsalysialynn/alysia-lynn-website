@@ -1,0 +1,95 @@
+name: Pull Request
+
+on:
+  pull_request:
+    types: [edited, opened, synchronize, reopened]
+
+jobs:
+  quality-check:
+    name: Quality Check
+    permissions: write-all
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: '.nvmrc'
+
+      - name: Cache Dependencies
+        uses: actions/cache@v3
+        id: yarn-cache
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: ${{ runner.os }}-yarn-
+
+      - name: Install Dependencies
+        if: steps.yarn-cache.outputs.cache-hit != 'true'
+        run: yarn install --immutable
+
+      - name: Run ESLint
+        run: yarn lint
+
+      - name: Run Prettier
+        run: yarn prettier --check src
+
+      - name: Run Jest
+        run: yarn test
+
+      - name: Generate Jest Report
+        uses: dorny/test-reporter@v1
+        if: failure() && !cancelled()
+        with:
+          name: Jest Test Report
+          path: reports/jest.xml
+          reporter: jest-junit
+          list-suites: 'failed'
+          list-tests: 'all'
+          fail-on-error: 'true'
+          max-annotations: '10'
+
+      - name: Generate Code Coverage Report
+        uses: 5monkeys/cobertura-action@master
+        if: ${{ success() || failure() }}
+        with:
+          path: reports/cobertura-coverage.xml
+          report_name: Code Coverage Report
+          minimum_coverage: 100
+          only_changed_files: 'true'
+          pull_request_number: ${{ github.event.number }}
+          show_class_names: 'true'
+          show_missing: 'false'
+          show_branch: 'false'
+          show_line: 'true'
+          skip_covered: 'true'
+          repo_token: ${{ github.token }}
+
+      - name: Run Typescript
+        run: yarn typescript
+
+  codeql:
+    name: CodeQL
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        language: ['javascript']
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Initialize
+        uses: github/codeql-action/init@v2
+        with:
+          languages: ${{ matrix.language }}
+
+      - name: Autobuild
+        uses: github/codeql-action/autobuild@v2
+
+      - name: Perform Analysis
+        uses: github/codeql-action/analyze@v2
+        with:
+          category: '/language:${{ matrix.language }}'

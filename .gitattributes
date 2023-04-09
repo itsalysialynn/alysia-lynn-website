@@ -1,0 +1,4 @@
+# So prs won't show massive diffs when we add or update these:
+
+/.yarn/releases/** binary
+/.storybook/.yarn/releases/** binary
