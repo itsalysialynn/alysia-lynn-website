@@ -1,8 +1,18 @@
 import React from 'react';
-import type { HeadFC } from 'gatsby';
+import { PageProps } from 'gatsby';
 
-const IndexPage = () => <div>Hello World</div>;
+import EducationSection from '../components/EducationSection';
+import EmploymentSection from '../components/EmploymentSection';
+import Layout from '../components/Layout';
 
-export default IndexPage;
+const Home: React.FC<PageProps> = () => (
+  <Layout
+    description="Alysia is a software engineer in British Columbia. I would be happy to discuss your next website or app idea with you. "
+    title="Alysia Lynn"
+  >
+    <EmploymentSection />
+    <EducationSection />
+  </Layout>
+);
 
-export const Head: HeadFC = () => <title>Home Page</title>;
+export default Home;

@@ -2,7 +2,6 @@
   "compilerOptions": {
     "target": "ESNext",
     "lib": ["dom", "dom.iterable", "esnext", "webworker"],
-    "rootDir": "src",
     "baseUrl": "./src",
     "allowJs": false,
     "skipLibCheck": true,
@@ -22,6 +21,5 @@
     "sourceMap": true,
     "declaration": true
   },
-  "include": ["src/**/*.tsx", "src/**/*.ts"],
-  "exclude": ["target"]
+  "exclude": ["target", "public", ".cache", ".yarn"]
 }
