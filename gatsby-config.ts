@@ -1,71 +1,72 @@
 import type { GatsbyConfig } from 'gatsby';
 
 const config: GatsbyConfig = {
-  siteMetadata: {
-    title: 'alysia-lynn',
-    siteUrl: 'https://www.alysia-lynn.com',
-  },
   graphqlTypegen: true,
   plugins: [
     {
-      resolve: 'gatsby-plugin-google-analytics',
       options: {
         enableWebVitalsTracking: true,
         head: true,
         trackingId: 'G-PKP2VXCGDL',
       },
+      resolve: 'gatsby-plugin-google-analytics',
     },
     {
-      resolve: 'gatsby-plugin-hotjar',
       options: {
         id: '3426616',
         includeInDevelopment: true, // optional parameter to include script in development
         sv: 6,
       },
+      resolve: 'gatsby-plugin-hotjar',
     },
     'gatsby-plugin-image',
     {
-      resolve: 'gatsby-plugin-manifest',
       options: {
         background_color: '#FFFFFF',
         display: 'standalone',
+        icon: `src/images/icon.png`,
         name: 'Alysia Lynn',
         start_url: '/',
         theme_color: '#6E00FF',
-        icon: `src/images/icon.png`,
       },
+      resolve: 'gatsby-plugin-manifest',
     },
     'gatsby-plugin-mdx',
     'gatsby-plugin-next-seo',
     {
-      resolve: 'gatsby-plugin-google-fonts',
       options: {
         display: 'swap',
         fonts: ['barlow:300,400,500,600,700'],
       },
+      resolve: 'gatsby-plugin-google-fonts',
     },
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sharp',
     'gatsby-plugin-sitemap',
     {
-      resolve: 'gatsby-source-filesystem',
+      __key: 'images',
       options: {
         name: 'images',
         path: './src/images/',
       },
-      __key: 'images',
+      resolve: 'gatsby-source-filesystem',
     },
     {
-      resolve: 'gatsby-source-filesystem',
+      __key: 'pages',
+
       options: {
         name: 'pages',
         path: './src/pages/',
       },
-      __key: 'pages',
+      resolve: 'gatsby-source-filesystem',
     },
     'gatsby-plugin-styled-components',
     'gatsby-transformer-sharp',
   ],
+  siteMetadata: {
+    siteUrl: 'https://www.alysia-lynn.com',
+    title: 'alysia-lynn',
+  },
 };
 
 export default config;

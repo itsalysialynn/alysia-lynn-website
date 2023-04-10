@@ -22,6 +22,5 @@
     "sourceMap": true,
     "declaration": true
   },
-  "include": ["src/**/*.tsx", "src/**/*.ts"],
-  "exclude": ["target"]
+  "exclude": ["target", "public"]
 }

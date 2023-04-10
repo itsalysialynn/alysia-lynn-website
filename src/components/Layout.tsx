@@ -7,8 +7,15 @@ import GlobalStyles from '../ui/GlobalStyles';
 import darkTheme from '../ui/themes/darkTheme';
 import lightTheme from '../ui/themes/lightTheme';
 
+import Footer from './Footer';
+import Navbar from './Navbar';
+
 const PageWrapper = styled.div`
-  padding: 24px 48px;
+  padding: 112px 48px 24px 48px;
+`;
+
+const PageLayout = styled.main`
+  display: grid;
 `;
 
 type LayoutProps = {
@@ -26,7 +33,9 @@ const Layout = ({ children, description, nofollow, title }: LayoutProps) => {
       <GatsbySeo description={description} nofollow={nofollow} title={title} />
       <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
         <GlobalStyles />
-        {children}
+        <Navbar />
+        <PageLayout>{children}</PageLayout>
+        <Footer />
       </ThemeProvider>
     </PageWrapper>
   );

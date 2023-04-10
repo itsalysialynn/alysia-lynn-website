@@ -1,3 +1,5 @@
 .pnp.*
 .yarn
 .cache
+public
+target

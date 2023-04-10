@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
-import colors from './constants/colors';
-import { Theme } from './themes/types';
+
+import Theme from './themes/Theme';
 
 type GlobalStyleProps = {
   theme: Theme;
@@ -11,6 +11,7 @@ const GlobalStyle = createGlobalStyle`
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     background-repeat: no-repeat;
     font-family: 'Barlow', sans-serif;
+    box-sizing: border-box;
   }
 
   body {
@@ -28,7 +29,6 @@ const GlobalStyle = createGlobalStyle`
 
     h2 {
       font-size: 32px;
-      font-weight: normal;
       margin: 0;
       font-weight: bold;
       text-transform: uppercase;

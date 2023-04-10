@@ -1,9 +1,4 @@
-export enum ThemeType {
-  LIGHT,
-  DARK,
-}
-
-export type Theme = {
+type Theme = {
   backgroundColor: string;
   color: string;
   hyperlink: {
@@ -21,3 +16,5 @@ export type Theme = {
     backgroundColor: string;
   };
 };
+
+export default Theme;

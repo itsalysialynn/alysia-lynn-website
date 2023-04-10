@@ -1,12 +1,16 @@
 import colors from '../constants/colors';
-import { Theme } from './types';
+
+import Theme from './Theme';
 
 const lightTheme: Theme = {
   backgroundColor: colors.slate,
+  card: {
+    backgroundColor: colors.white,
+  },
   color: colors.galaxy,
   hyperlink: {
-    color: colors.grape,
     active: colors.leaf,
+    color: colors.grape,
     hover: colors.grape,
   },
   nav: {
@@ -14,9 +18,6 @@ const lightTheme: Theme = {
   },
   section: {
     borderColor: colors.iron,
-  },
-  card: {
-    backgroundColor: colors.white,
   },
 };
 

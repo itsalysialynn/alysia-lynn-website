@@ -1,11 +1,15 @@
-import { useEffect, useState } from 'react';
-import { ThemeType } from '../ui/themes/types';
+import { useCallback,useEffect, useState } from 'react';
+
+import ThemeType from '../ui/themes/ThemeType';
 
 const useTheme = () => {
   const [theme, setTheme] = useState<ThemeType>(ThemeType.LIGHT);
 
-  const handleColorSchemeChange = (event: { matches: any }) =>
-    event.matches ? setTheme(ThemeType.DARK) : setTheme(ThemeType.LIGHT);
+  const handleColorSchemeChange = useCallback(
+    (event: { matches: any }) =>
+      event.matches ? setTheme(ThemeType.DARK) : setTheme(ThemeType.LIGHT),
+    [],
+  );
 
   useEffect(() => {
     const systemDarkMode =
@@ -28,8 +32,8 @@ const useTheme = () => {
   }, [handleColorSchemeChange]);
 
   return {
-    theme,
     isDarkTheme: theme === ThemeType.DARK,
+    theme,
   };
 };
 
