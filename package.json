@@ -15,7 +15,7 @@
     "clean": "gatsby clean",
     "typescript": "tsc --noEmit",
     "lint": "eslint .",
-    "test": "jest --coverage"
+    "test": "NODE_ENV=test jest --coverage"
   },
   "dependencies": {
     "@testing-library/react": "^14.0.0",

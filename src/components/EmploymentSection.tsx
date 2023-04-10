@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import employmentHistory, { Employment } from '../data/employmentHistory';
+import employmentHistory from '../data/employmentHistory';
 import formatYearRange from '../helpers/formatYearRange';
 import Card from '../ui/Card';
 import ExternalLink from '../ui/ExternalLink';
@@ -17,10 +17,7 @@ const EmploymentSection = () => (
     <h3>Employment</h3>
     <EmploymentSectionLayout>
       {employmentHistory.map(
-        (
-          { company, companyHref, endYear, startYear, title, accomplishments }: Employment,
-          index,
-        ) => (
+        ({ company, companyHref, endYear, startYear, title, accomplishments }, index) => (
           <Card
             key={index}
             header={title}

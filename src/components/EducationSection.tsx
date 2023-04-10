@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import widont from 'widont';
 
-import educationHistory, { Education } from '../data/educationHistory';
+import educationHistory from '../data/educationHistory';
 import formatYearRange from '../helpers/formatYearRange';
 import Card from '../ui/Card';
 import ExternalLink from '../ui/ExternalLink';
@@ -18,7 +18,7 @@ const EducationSection = () => (
     <h3>Education</h3>
     <EducationSectionLayout>
       {educationHistory.map(
-        ({ course, courseHref, endYear, school, startYear, description }: Education, index) => (
+        ({ course, courseHref, endYear, school, startYear, description }, index) => (
           <Card
             key={index}
             header={school}

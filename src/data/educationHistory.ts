@@ -1,4 +1,4 @@
-export type Education = {
+type Education = {
   course: string;
   courseHref: string;
   currentlyStudying: boolean;

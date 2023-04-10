@@ -10,7 +10,7 @@ module.exports = {
     'airbnb',
     'prettier',
   ],
-  ignorePatterns: ['public'],
+  ignorePatterns: ['public', 'target', '.cache', '.yarn'],
   overrides: [],
   parserOptions: {
     ecmaVersion: 'latest',

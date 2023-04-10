@@ -3,7 +3,7 @@ type Skill = {
   name: string;
 };
 
-export type Employment = {
+type Employment = {
   accomplishments: string[];
   company: string;
   companyHref: string;

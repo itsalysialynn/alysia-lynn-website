@@ -22,5 +22,5 @@
     "sourceMap": true,
     "declaration": true
   },
-  "exclude": ["target", "public"]
+  "exclude": ["target", "public", ".cache", ".yarn"]
 }
