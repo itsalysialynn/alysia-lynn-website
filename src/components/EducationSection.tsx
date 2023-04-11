@@ -17,7 +17,7 @@ const EducationSectionLayout = styled.div`
 const EducationSection = () => (
   <Section id="education">
     <EducationSectionLayout>
-      <MotionAnimate animation="fadeInUp" delay={1} distance={50} reset={true} speed={1}>
+      <MotionAnimate animation="fadeInUp" delay={1} distance={50} reset speed={1}>
         <h2>Education</h2>
       </MotionAnimate>
       {educationHistory.map(

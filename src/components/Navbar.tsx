@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import { FaEnvelope,FaGithubAlt, FaLinkedinIn } from 'react-icons/fa';
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
+import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import styled from 'styled-components';
 
 import { mediaQueries } from '../ui/constants/mediaQueries';
@@ -31,12 +33,12 @@ const NavbarLayout = styled.nav`
 
   @media ${mediaQueries.tablet} {
     text-align: center;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     padding: 0 32px;
   }
 
   @media ${mediaQueries.ld} {
-    grid-template-columns: 2fr 3fr;
+    grid-template-columns: 1fr 1fr;
     padding: 0 128px;
   }
   
@@ -55,6 +57,14 @@ const NavigationItems = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+`;
+
+const NavigationIcons = styled.div`
+  display: flex;
+  flex-direction: row;
+  grid-gap: 24px;
+  align-items: center;
+  justify-content: flex-end;
 `;
 
 const Navbar = () => {
@@ -79,6 +89,27 @@ const Navbar = () => {
           Education
         </AnchorLink>
       </NavigationItems>
+      <NavigationIcons>
+        <OutboundLink
+          aria-label="GitHub"
+          href="https://github.com/itsalysialynn"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <FaGithubAlt size={20} />
+        </OutboundLink>
+        <OutboundLink
+          aria-label="Linkedin"
+          href="https://www.linkedin.com/in/itsalysialynn/"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <FaLinkedinIn size={20} />
+        </OutboundLink>
+        <a aria-label="Email Me" href="mailto:itsalysialynn@gmail.com">
+          <FaEnvelope size={20} />
+        </a>
+      </NavigationIcons>
     </NavbarLayout>
   );
 };
