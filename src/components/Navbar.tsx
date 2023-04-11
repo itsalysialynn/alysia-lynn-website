@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { FaEnvelope,FaGithubAlt, FaLinkedinIn } from 'react-icons/fa';
+import { FaEnvelope, FaGithubAlt, FaLinkedinIn } from 'react-icons/fa';
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import styled from 'styled-components';
@@ -24,21 +24,22 @@ const NavbarLayout = styled.nav`
   height: ${NAV_HEIGHT}px;
   z-index: 1;
   display: grid;
+  align-items: center;
 
   @media ${mediaQueries.mobile} {
     text-align: center;
-    grid-template-columns: 1fr;
+    grid-template-columns: 5fr 2fr;
     padding: 0 32px;
   }
 
   @media ${mediaQueries.tablet} {
     text-align: center;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 5fr 2fr;
     padding: 0 32px;
   }
 
   @media ${mediaQueries.ld} {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
     padding: 0 128px;
   }
   
@@ -62,9 +63,32 @@ const NavigationItems = styled.div`
 const NavigationIcons = styled.div`
   display: flex;
   flex-direction: row;
-  grid-gap: 24px;
   align-items: center;
   justify-content: flex-end;
+
+  @media ${mediaQueries.mobile} {
+    grid-gap: 8px;
+  }
+
+  @media ${mediaQueries.tablet} {
+    grid-gap: 16px;
+  }
+
+  @media ${mediaQueries.ld} {
+    grid-gap: 24px;
+  }
+`;
+
+const NavIconOutboundLink = styled(OutboundLink)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const NavIconLink = styled(OutboundLink)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 const Navbar = () => {
@@ -90,25 +114,25 @@ const Navbar = () => {
         </AnchorLink>
       </NavigationItems>
       <NavigationIcons>
-        <OutboundLink
+        <NavIconOutboundLink
           aria-label="GitHub"
           href="https://github.com/itsalysialynn"
           rel="noreferrer"
           target="_blank"
         >
           <FaGithubAlt size={20} />
-        </OutboundLink>
-        <OutboundLink
+        </NavIconOutboundLink>
+        <NavIconOutboundLink
           aria-label="Linkedin"
           href="https://www.linkedin.com/in/itsalysialynn/"
           rel="noreferrer"
           target="_blank"
         >
           <FaLinkedinIn size={20} />
-        </OutboundLink>
-        <a aria-label="Email Me" href="mailto:itsalysialynn@gmail.com">
+        </NavIconOutboundLink>
+        <NavIconLink href="mailto:itsalysialynn@gmail.com" NavIconLinkria-label="Email Me">
           <FaEnvelope size={20} />
-        </a>
+        </NavIconLink>
       </NavigationIcons>
     </NavbarLayout>
   );

@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
 import { FiArrowUpRight } from 'react-icons/fi';
 import { OutboundLink } from 'gatsby-plugin-google-analytics';
+import styled from 'styled-components';
+
+const ExternalOutboundLink = styled(OutboundLink)`
+  display: flex;
+  align-items: center;
+`;
 
 type ExternalLinkProps = {
   href: string;
@@ -11,7 +17,7 @@ const ExternalLink = ({ text, href }: ExternalLinkProps) => {
   const [isHovering, setIsHovering] = useState<boolean>(false);
 
   return (
-    <OutboundLink
+    <ExternalOutboundLink
       aria-label={text}
       href={href}
       onMouseEnter={() => setIsHovering(true)}
@@ -20,7 +26,7 @@ const ExternalLink = ({ text, href }: ExternalLinkProps) => {
       target="_blank"
     >
       {text} {isHovering && <FiArrowUpRight />}
-    </OutboundLink>
+    </ExternalOutboundLink>
   );
 };
 
