@@ -12,15 +12,15 @@ const Section = styled.section<SectionProps>`
   grid-gap: 24px;
 
   @media ${mediaQueries.mobile} {
-    padding: 72px 32px 32px 32px;
+    padding: 84px 32px 32px 32px;
   }
 
   @media ${mediaQueries.tablet} {
-    padding: 72px 32px 32px 32px;
+    padding: 84px 32px 32px 32px;
   }
 
   @media ${mediaQueries.ld} {
-    padding: 72px 128px;
+    padding: 84px 128px;
   }
 `;
 

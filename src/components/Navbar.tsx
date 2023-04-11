@@ -72,10 +72,10 @@ const Navbar = () => {
         <AnchorLink title="About" to="#about">
           About
         </AnchorLink>
-        <AnchorLink title="About" to="#employment">
+        <AnchorLink title="Employment" to="#employment">
           Employment History
         </AnchorLink>
-        <AnchorLink title="About" to="#education">
+        <AnchorLink title="Education" to="#education">
           Education
         </AnchorLink>
       </NavigationItems>
