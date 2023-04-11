@@ -10,6 +10,7 @@ const colors = {
   shadow: '#5d5c5e',
   slate: '#F6F6F6',
   snow: '#F2F4F5',
+  sunrise: '#dc90ff',
   whale: '#23a6d5',
   white: '#FFFFFF',
 };

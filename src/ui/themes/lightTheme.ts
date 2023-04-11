@@ -15,6 +15,10 @@ const lightTheme: Theme = {
   },
   nav: {
     backgroundColor: colors.white,
+    hyperlink: {
+      color: colors.shadow,
+      hover: colors.grape,
+    },
   },
   section: {
     borderColor: colors.iron,

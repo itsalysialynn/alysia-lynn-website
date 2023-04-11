@@ -28,7 +28,7 @@ const Image = ({ alt, backgroundColor, imgStyle, loading, imageName }: ImageProp
         nodes {
           relativePath
           childImageSharp {
-            gatsbyImageData(width: 100)
+            gatsbyImageData(width: 200)
           }
         }
       }

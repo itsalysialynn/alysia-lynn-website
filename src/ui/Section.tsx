@@ -1,22 +1,27 @@
 import styled from 'styled-components';
 
-import mediaQueries from './constants/mediaQueries';
+import { mediaQueries } from './constants/mediaQueries';
 import Theme from './themes/Theme';
 
 type SectionProps = {
   theme: Theme;
 };
 
-const Section = styled.div<SectionProps>`
-  border-bottom: 1px solid ${({ theme }) => theme.section.borderColor};
-  padding: 32px 0;
+const Section = styled.section<SectionProps>`
   display: grid;
-  grid-gap: 16px;
-  grid-template-columns: 1fr 4fr;
+  grid-gap: 24px;
 
-  ${mediaQueries.mobile`
-    grid-template-columns: 1fr;
-  `}
+  @media ${mediaQueries.mobile} {
+    padding: 72px 32px 32px 32px;
+  }
+
+  @media ${mediaQueries.tablet} {
+    padding: 72px 32px 32px 32px;
+  }
+
+  @media ${mediaQueries.ld} {
+    padding: 72px 128px;
+  }
 `;
 
 export default Section;
