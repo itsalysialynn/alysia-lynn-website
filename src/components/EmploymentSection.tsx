@@ -16,30 +16,23 @@ const EmploymentSectionLayout = styled.div`
 const EmploymentSection = () => (
   <Section id="employment">
     <EmploymentSectionLayout>
-      <h2>Employment History</h2>
+      <MotionAnimate animation="fadeInUp" delay={1} distance={50} reset={true} speed={1}>
+        <h2>Employment History</h2>
+      </MotionAnimate>
       {employmentHistory.map(
         ({ company, companyHref, endYear, startYear, title, accomplishments }, index) => (
-          <MotionAnimate
-            key={index}
-            animation="fade"
-            delay={0.5}
-            distance={100}
-            reset={false}
-            speed={1}
+          <Card
+            header={title}
+            id={`employment-${index.toString()}-card`}
+            yearRange={formatYearRange(startYear, endYear)}
           >
-            <Card
-              header={title}
-              id={`employment-${index.toString()}-card`}
-              yearRange={formatYearRange(startYear, endYear)}
-            >
-              <ExternalLink href={companyHref} text={company} />
-              <ul>
-                {accomplishments.map((accomplishment, accomplishmentIndex) => (
-                  <li key={accomplishmentIndex}>{accomplishment}</li>
-                ))}
-              </ul>
-            </Card>
-          </MotionAnimate>
+            <ExternalLink href={companyHref} text={company} />
+            <ul>
+              {accomplishments.map((accomplishment, accomplishmentIndex) => (
+                <li key={accomplishmentIndex}>{accomplishment}</li>
+              ))}
+            </ul>
+          </Card>
         ),
       )}
     </EmploymentSectionLayout>

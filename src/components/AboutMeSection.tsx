@@ -67,7 +67,7 @@ const IntroTextLoop = styled.h2`
 
 const AboutMeSection = () => (
   <AboutMeSectionDesktopLayout id="about">
-    <MotionAnimate animation="fadeInUp" delay={0.5} distance={100} reset={false} speed={1}>
+    <MotionAnimate animation="fadeInUp" delay={0.5} distance={100} reset={true} speed={1}>
       <IntroText>Hi, I'm Alysia Lynn,</IntroText>
       <IntroTextLoop>
         and I <TextLoop children={factsAboutMe} />

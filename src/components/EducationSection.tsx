@@ -17,26 +17,19 @@ const EducationSectionLayout = styled.div`
 const EducationSection = () => (
   <Section id="education">
     <EducationSectionLayout>
-      <h2>Education</h2>
+      <MotionAnimate animation="fadeInUp" delay={1} distance={50} reset={true} speed={1}>
+        <h2>Education</h2>
+      </MotionAnimate>
       {educationHistory.map(
         ({ course, courseHref, endYear, school, startYear, description }, index) => (
-          <MotionAnimate
-            key={index}
-            animation="fade"
-            delay={0.5}
-            distance={100}
-            reset={false}
-            speed={1}
+          <Card
+            header={school}
+            id={`education-${index.toString()}-card`}
+            yearRange={formatYearRange(startYear, endYear)}
           >
-            <Card
-              header={school}
-              id={`education-${index.toString()}-card`}
-              yearRange={formatYearRange(startYear, endYear)}
-            >
-              <ExternalLink href={courseHref} text={course} />
-              <p>{widont(description)}</p>
-            </Card>
-          </MotionAnimate>
+            <ExternalLink href={courseHref} text={course} />
+            <p>{widont(description)}</p>
+          </Card>
         ),
       )}
     </EducationSectionLayout>
