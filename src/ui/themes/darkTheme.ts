@@ -16,8 +16,8 @@ const darkTheme: Theme = {
   nav: {
     backgroundColor: colors.onyx,
     hyperlink: {
-      color: colors.sunrise,
-      hover: colors.snow,
+      color: colors.snow,
+      hover: colors.sunrise,
     },
   },
   section: {

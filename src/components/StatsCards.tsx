@@ -57,7 +57,7 @@ const StatsCards = () => (
         <CounterNumber>
           <CountUp delay={2.2} end={new Date().getFullYear() - 2017} start={0} />
         </CounterNumber>
-        Years of Development Experience
+        Years of Web Development Experience
       </Card>
       <Card>
         <CounterNumber>
