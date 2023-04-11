@@ -124,7 +124,7 @@ const Navbar = () => {
         >
           <FaLinkedinIn size={20} />
         </NavIconOutboundLink>
-        <NavIconOutboundLink href="mailto:itsalysialynn@gmail.com" NavIconLinkria-label="Email Me">
+        <NavIconOutboundLink href="mailto:itsalysialynn@gmail.com" aria-label="Email Me">
           <FaEnvelope size={20} />
         </NavIconOutboundLink>
       </NavigationIcons>
