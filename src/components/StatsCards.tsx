@@ -51,7 +51,7 @@ const StatsLayout = styled.div`
 `;
 
 const StatsCards = () => (
-  <MotionAnimate animation="fadeInUp" delay={1} distance={100} speed={2}>
+  <MotionAnimate animation="fadeInUp" delay={1} reset distance={100} speed={2}>
     <StatsLayout>
       <Card>
         <CounterNumber>
