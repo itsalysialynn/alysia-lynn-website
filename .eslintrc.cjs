@@ -22,6 +22,8 @@ module.exports = {
     '@typescript-eslint/no-shadow': ['error'],
     '@typescript-eslint/no-unused-expressions': 'error',
     '@typescript-eslint/no-unused-vars': 'error',
+    'react/no-unescaped-entities': 'off',
+    'react/no-children-prop': 'off',
     'import/extensions': 'off',
     'import/no-named-as-default': 'warn',
     'jsx-a11y/anchor-is-valid': 'off',
@@ -61,7 +63,7 @@ module.exports = {
   settings: {
     'import/resolver': {
       node: {
-        extensions: ['.ts', '.tsx'],
+        extensions: ['.ts', '.tsx', '.js'],
         moduleDirectory: ['src', 'node_modules'],
       },
     },

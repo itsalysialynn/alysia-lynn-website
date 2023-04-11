@@ -8,14 +8,10 @@ import darkTheme from '../ui/themes/darkTheme';
 import lightTheme from '../ui/themes/lightTheme';
 
 import Footer from './Footer';
-import Navbar from './Navbar';
+import Navbar, { NAV_HEIGHT } from './Navbar';
 
 const PageWrapper = styled.div`
-  padding: 112px 48px 24px 48px;
-`;
-
-const PageLayout = styled.main`
-  display: grid;
+  padding-top: ${NAV_HEIGHT}px;
 `;
 
 type LayoutProps = {
@@ -34,7 +30,7 @@ const Layout = ({ children, description, nofollow, title }: LayoutProps) => {
       <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
         <GlobalStyles />
         <Navbar />
-        <PageLayout>{children}</PageLayout>
+        {children}
         <Footer />
       </ThemeProvider>
     </PageWrapper>

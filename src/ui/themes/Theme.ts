@@ -8,6 +8,10 @@ type Theme = {
   };
   nav: {
     backgroundColor: string;
+    hyperlink: {
+      color: string;
+      hover: string;
+    };
   };
   section: {
     borderColor: string;
