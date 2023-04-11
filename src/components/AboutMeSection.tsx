@@ -11,6 +11,15 @@ import Section from '../ui/Section';
 import StatsCards from './StatsCards';
 
 const AboutMeSectionDesktopLayout = styled(Section)`
+  height: 100vh;
+  @media ${mediaQueries.mobile} {
+    padding: 25vh 32px;
+  }
+
+  @media ${mediaQueries.tablet} {
+    padding: 25vh 32px;
+  }
+
   @media ${mediaQueries.ld} {
     height: 100vh;
     padding: 25vh 128px;
@@ -33,7 +42,7 @@ const IntroText = styled.h1`
   );
 
   @media ${mediaQueries.mobile} {
-    font-size: 40px;
+    font-size: 48px;
     font-weight: bold;
   }
 

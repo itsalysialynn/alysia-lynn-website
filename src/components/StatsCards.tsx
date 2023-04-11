@@ -38,7 +38,7 @@ const StatsLayout = styled.div`
   grid-gap: 8px;
 
   @media ${mediaQueries.mobile} {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 
   @media ${mediaQueries.tablet} {
