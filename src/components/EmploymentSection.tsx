@@ -16,7 +16,7 @@ const EmploymentSectionLayout = styled.div`
 const EmploymentSection = () => (
   <Section id="employment">
     <EmploymentSectionLayout>
-      <MotionAnimate animation="fadeInUp" delay={1} distance={50} reset={true} speed={1}>
+      <MotionAnimate animation="fadeInUp" delay={1} distance={50} reset speed={1}>
         <h2>Employment History</h2>
       </MotionAnimate>
       {employmentHistory.map(

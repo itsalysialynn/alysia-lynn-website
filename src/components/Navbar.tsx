@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import { FaEnvelope, FaGithubAlt, FaLinkedinIn } from 'react-icons/fa';
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
+import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import styled from 'styled-components';
 
 import { mediaQueries } from '../ui/constants/mediaQueries';
@@ -22,21 +24,22 @@ const NavbarLayout = styled.nav`
   height: ${NAV_HEIGHT}px;
   z-index: 1;
   display: grid;
+  align-items: center;
 
   @media ${mediaQueries.mobile} {
     text-align: center;
-    grid-template-columns: 1fr;
+    grid-template-columns: 5fr 2fr;
     padding: 0 32px;
   }
 
   @media ${mediaQueries.tablet} {
     text-align: center;
-    grid-template-columns: 1fr;
+    grid-template-columns: 5fr 2fr;
     padding: 0 32px;
   }
 
   @media ${mediaQueries.ld} {
-    grid-template-columns: 2fr 3fr;
+    grid-template-columns: 2fr 1fr;
     padding: 0 128px;
   }
   
@@ -54,6 +57,31 @@ const NavigationItems = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+`;
+
+const NavigationIcons = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+
+  @media ${mediaQueries.mobile} {
+    grid-gap: 8px;
+  }
+
+  @media ${mediaQueries.tablet} {
+    grid-gap: 16px;
+  }
+
+  @media ${mediaQueries.ld} {
+    grid-gap: 24px;
+  }
+`;
+
+const NavIconOutboundLink = styled(OutboundLink)`
+  display: flex;
+  justify-content: center;
   align-items: center;
 `;
 
@@ -79,6 +107,27 @@ const Navbar = () => {
           Education
         </AnchorLink>
       </NavigationItems>
+      <NavigationIcons>
+        <NavIconOutboundLink
+          aria-label="GitHub"
+          href="https://github.com/itsalysialynn"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <FaGithubAlt size={20} />
+        </NavIconOutboundLink>
+        <NavIconOutboundLink
+          aria-label="Linkedin"
+          href="https://www.linkedin.com/in/itsalysialynn/"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <FaLinkedinIn size={20} />
+        </NavIconOutboundLink>
+        <NavIconOutboundLink href="mailto:itsalysialynn@gmail.com" NavIconLinkria-label="Email Me">
+          <FaEnvelope size={20} />
+        </NavIconOutboundLink>
+      </NavigationIcons>
     </NavbarLayout>
   );
 };
