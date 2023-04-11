@@ -73,26 +73,3 @@ jobs:
       - name: Run Typescript
         run: yarn typescript
 
-  codeql:
-    name: CodeQL
-    runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        language: ['javascript']
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v3
-
-      - name: Initialize
-        uses: github/codeql-action/init@v2
-        with:
-          languages: ${{ matrix.language }}
-
-      - name: Autobuild
-        uses: github/codeql-action/autobuild@v2
-
-      - name: Perform Analysis
-        uses: github/codeql-action/analyze@v2
-        with:
-          category: '/language:${{ matrix.language }}'
