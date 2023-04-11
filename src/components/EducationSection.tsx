@@ -1,4 +1,5 @@
 import React from 'react';
+import { MotionAnimate } from 'react-motion-animate';
 import styled from 'styled-components';
 import widont from 'widont';
 
@@ -10,24 +11,32 @@ import Section from '../ui/Section';
 
 const EducationSectionLayout = styled.div`
   display: grid;
-  grid-gap: 16px;
+  grid-gap: 24px;
 `;
 
 const EducationSection = () => (
-  <Section>
-    <h3>Education</h3>
+  <Section id="education">
     <EducationSectionLayout>
+      <h2>Education</h2>
       {educationHistory.map(
         ({ course, courseHref, endYear, school, startYear, description }, index) => (
-          <Card
+          <MotionAnimate
             key={index}
-            header={school}
-            id={`education-${index.toString()}-card`}
-            yearRange={formatYearRange(startYear, endYear)}
+            animation="fade"
+            delay={0.5}
+            distance={100}
+            reset={false}
+            speed={1}
           >
-            <ExternalLink href={courseHref} text={course} />
-            <p>{widont(description)}</p>
-          </Card>
+            <Card
+              header={school}
+              id={`education-${index.toString()}-card`}
+              yearRange={formatYearRange(startYear, endYear)}
+            >
+              <ExternalLink href={courseHref} text={course} />
+              <p>{widont(description)}</p>
+            </Card>
+          </MotionAnimate>
         ),
       )}
     </EducationSectionLayout>

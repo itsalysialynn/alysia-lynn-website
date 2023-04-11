@@ -72,4 +72,3 @@ jobs:
 
       - name: Run Typescript
         run: yarn typescript
-

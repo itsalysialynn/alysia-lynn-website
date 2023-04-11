@@ -10,11 +10,15 @@ const darkTheme: Theme = {
   color: colors.snow,
   hyperlink: {
     active: colors.grape,
-    color: colors.leaf,
-    hover: colors.leaf,
+    color: colors.sunrise,
+    hover: colors.sunrise,
   },
   nav: {
     backgroundColor: colors.onyx,
+    hyperlink: {
+      color: colors.white,
+      hover: colors.snow,
+    },
   },
   section: {
     borderColor: colors.onyx,

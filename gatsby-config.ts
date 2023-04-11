@@ -24,7 +24,7 @@ const config: GatsbyConfig = {
       options: {
         background_color: '#FFFFFF',
         display: 'standalone',
-        icon: `src/images/icon.png`,
+        icon: 'src/images/icon.png',
         name: 'Alysia Lynn',
         start_url: '/',
         theme_color: '#6E00FF',
@@ -36,7 +36,7 @@ const config: GatsbyConfig = {
     {
       options: {
         display: 'swap',
-        fonts: ['barlow:300,400,500,600,700'],
+        fonts: ['inter:300,400,500,600,700'],
       },
       resolve: 'gatsby-plugin-google-fonts',
     },
@@ -61,6 +61,12 @@ const config: GatsbyConfig = {
       resolve: 'gatsby-source-filesystem',
     },
     'gatsby-plugin-styled-components',
+    {
+      options: {
+        plugins: ['gatsby-remark-emoji'],
+      },
+      resolve: 'gatsby-transformer-remark',
+    },
     'gatsby-transformer-sharp',
   ],
   siteMetadata: {
