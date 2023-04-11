@@ -44,7 +44,6 @@ const IntroText = styled.h1`
 
   @media ${mediaQueries.ld} {
     font-size: 80px;
-
     font-weight: 800;
   }
 `;
