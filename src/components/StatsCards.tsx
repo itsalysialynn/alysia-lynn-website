@@ -55,12 +55,6 @@ const StatsCards = () => (
     <StatsLayout>
       <Card>
         <CounterNumber>
-          <CountUp delay={2} end={1} start={0} />
-        </CounterNumber>
-        Web Development Bootcamp
-      </Card>
-      <Card>
-        <CounterNumber>
           <CountUp delay={2.2} end={new Date().getFullYear() - 2017} start={0} />
         </CounterNumber>
         Years of Development Experience
@@ -76,6 +70,12 @@ const StatsCards = () => (
           <CountUp delay={2.6} end={4} start={0} />
         </CounterNumber>
         Dev Books Read in 2023
+      </Card>
+      <Card>
+        <CounterNumber>
+          <CountUp delay={2} end={1} start={0} />
+        </CounterNumber>
+        Web Development Bootcamp
       </Card>
     </StatsLayout>
   </MotionAnimate>
