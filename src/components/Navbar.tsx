@@ -85,12 +85,6 @@ const NavIconOutboundLink = styled(OutboundLink)`
   align-items: center;
 `;
 
-const NavIconLink = styled(OutboundLink)`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
 const Navbar = () => {
   const [isTopOfPage, setIsTopOfPage] = useState(true);
 
@@ -130,9 +124,9 @@ const Navbar = () => {
         >
           <FaLinkedinIn size={20} />
         </NavIconOutboundLink>
-        <NavIconLink href="mailto:itsalysialynn@gmail.com" NavIconLinkria-label="Email Me">
+        <NavIconOutboundLink href="mailto:itsalysialynn@gmail.com" NavIconLinkria-label="Email Me">
           <FaEnvelope size={20} />
-        </NavIconLink>
+        </NavIconOutboundLink>
       </NavigationIcons>
     </NavbarLayout>
   );
