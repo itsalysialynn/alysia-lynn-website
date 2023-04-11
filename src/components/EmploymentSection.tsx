@@ -1,4 +1,5 @@
 import React from 'react';
+import { MotionAnimate } from 'react-motion-animate';
 import styled from 'styled-components';
 
 import employmentHistory from '../data/employmentHistory';
@@ -9,28 +10,36 @@ import Section from '../ui/Section';
 
 const EmploymentSectionLayout = styled.div`
   display: grid;
-  grid-gap: 16px;
+  grid-gap: 24px;
 `;
 
 const EmploymentSection = () => (
-  <Section>
-    <h3>Employment</h3>
+  <Section id="employment">
     <EmploymentSectionLayout>
+      <h2>Employment History</h2>
       {employmentHistory.map(
         ({ company, companyHref, endYear, startYear, title, accomplishments }, index) => (
-          <Card
+          <MotionAnimate
             key={index}
-            header={title}
-            id={`employment-${index.toString()}-card`}
-            yearRange={formatYearRange(startYear, endYear)}
+            animation="fade"
+            delay={0.5}
+            distance={100}
+            reset={false}
+            speed={1}
           >
-            <ExternalLink href={companyHref} text={company} />
-            <ul>
-              {accomplishments.map((accomplishment, accomplishmentIndex) => (
-                <li key={accomplishmentIndex}>{accomplishment}</li>
-              ))}
-            </ul>
-          </Card>
+            <Card
+              header={title}
+              id={`employment-${index.toString()}-card`}
+              yearRange={formatYearRange(startYear, endYear)}
+            >
+              <ExternalLink href={companyHref} text={company} />
+              <ul>
+                {accomplishments.map((accomplishment, accomplishmentIndex) => (
+                  <li key={accomplishmentIndex}>{accomplishment}</li>
+                ))}
+              </ul>
+            </Card>
+          </MotionAnimate>
         ),
       )}
     </EmploymentSectionLayout>

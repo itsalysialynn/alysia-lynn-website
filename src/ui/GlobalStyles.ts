@@ -10,7 +10,7 @@ const GlobalStyle = createGlobalStyle`
   * {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     background-repeat: no-repeat;
-    font-family: 'Barlow', sans-serif;
+    font-family: Inter, sans-serif;
     box-sizing: border-box;
   }
 
@@ -21,29 +21,26 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
 
     h1 {
-      font-size: 48px;
-      font-weight: 700;
+      font-size: 80px;
+      letter-spacing: -.02em;
+      font-weight: 800;
       margin: 0;
-      text-transform: uppercase;
     }
 
     h2 {
-      font-size: 32px;
+      font-size: 40px;
       margin: 0;
-      font-weight: bold;
-      text-transform: uppercase;
+      font-weight: 700;
     }
 
     h3 {
       font-size: 24px;
-      font-weight: normal;
+      font-weight: 600;
       margin: 0;
-      text-transform: uppercase;
     }
 
     h4 {
-      font-size: 16px;
-      font-weight: 500;
+      font-weight: bold;
       margin: 0;
     }
 
@@ -61,6 +58,10 @@ const GlobalStyle = createGlobalStyle`
 
       &.active {
         color: ${({ theme }: GlobalStyleProps) => theme.hyperlink.active};
+      }
+
+      &.hover {
+        color: ${({ theme }: GlobalStyleProps) => theme.hyperlink.hover};
       }
     }
 
