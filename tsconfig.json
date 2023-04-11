@@ -19,7 +19,7 @@
     "jsx": "react-jsx",
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
-    "declaration": true
+    "declaration": true,
   },
   "exclude": ["target", "public", ".cache", ".yarn"]
 }
