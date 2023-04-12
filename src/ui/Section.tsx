@@ -12,7 +12,7 @@ const Section = styled.section<SectionProps>`
   grid-gap: 24px;
 
   @media ${mediaQueries.mobile} {
-    padding: 84px 32px 32px 32px;
+    padding: 84px 16px 16px 16px;
   }
 
   @media ${mediaQueries.tablet} {

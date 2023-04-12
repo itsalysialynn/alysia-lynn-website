@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import { NAV_HEIGHT } from '../components/Navbar';
 
+import { mediaQueries } from './constants/mediaQueries';
 import Theme from './themes/Theme';
 
 type CardLayoutProps = {
@@ -15,6 +16,14 @@ const CardLayout = styled.div<CardLayoutProps>`
   display: grid;
   grid-gap: 8px;
   padding: 24px;
+
+  @media ${mediaQueries.mobile} {
+    padding: 16px;
+  }
+
+  @media ${mediaQueries.tablet} {
+    padding: 24px;
+  }
 `;
 
 const CardHeaderLayout = styled.div`

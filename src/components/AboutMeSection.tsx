@@ -11,12 +11,13 @@ import Section from '../ui/Section';
 import StatsCards from './StatsCards';
 
 const AboutMeSectionDesktopLayout = styled(Section)`
-  height: 100vh;
   @media ${mediaQueries.mobile} {
-    padding: 25vh 32px;
+    height: 60vh;
+    padding: 15vh 16px;
   }
 
   @media ${mediaQueries.tablet} {
+    height: 100vh;
     padding: 25vh 32px;
   }
 
@@ -42,7 +43,7 @@ const IntroText = styled.h1`
   );
 
   @media ${mediaQueries.mobile} {
-    font-size: 48px;
+    font-size: 36px;
     font-weight: bold;
   }
 
@@ -59,7 +60,7 @@ const IntroText = styled.h1`
 
 const IntroTextLoop = styled.h2`
   @media ${mediaQueries.mobile} {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: bold;
   }
 

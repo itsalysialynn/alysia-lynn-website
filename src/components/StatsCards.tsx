@@ -19,17 +19,18 @@ type CardProps = {
 const Card = styled.div<CardProps>`
   background-color: ${({ theme }: CardProps) => theme.card.backgroundColor};
   border-radius: 4px;
-  padding: 24px;
   display: flex;
   align-items: center;
   grid-gap: 8px;
 
   @media ${mediaQueries.mobile} {
-    grid-gap: 16px;
+    grid-gap: 8px;
+    padding: 16px;
   }
 
   @media ${mediaQueries.tablet} {
     grid-gap: 16px;
+    padding: 24px;
   }
 `;
 
@@ -51,13 +52,13 @@ const StatsLayout = styled.div`
 `;
 
 const StatsCards = () => (
-  <MotionAnimate animation="fadeInUp" delay={1} reset distance={100} speed={2}>
+  <MotionAnimate animation="fadeInUp" delay={1} distance={100} reset speed={2}>
     <StatsLayout>
       <Card>
         <CounterNumber>
           <CountUp delay={2.2} end={new Date().getFullYear() - 2017} start={0} />
         </CounterNumber>
-        Years of Web Development Experience
+        Years of Dev Experience
       </Card>
       <Card>
         <CounterNumber>
@@ -75,7 +76,7 @@ const StatsCards = () => (
         <CounterNumber>
           <CountUp delay={2} end={1} start={0} />
         </CounterNumber>
-        Web Development Bootcamp
+        Web Dev Bootcamp
       </Card>
     </StatsLayout>
   </MotionAnimate>

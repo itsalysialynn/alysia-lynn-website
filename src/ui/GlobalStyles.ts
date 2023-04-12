@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
+import { mediaQueries } from './constants/mediaQueries';
 import Theme from './themes/Theme';
 
 type GlobalStyleProps = {
@@ -31,6 +32,10 @@ const GlobalStyle = createGlobalStyle`
       font-size: 40px;
       margin: 0;
       font-weight: 700;
+      
+      @media ${mediaQueries.mobile} {
+        font-size: 32px;
+      }
     }
 
     h3 {

@@ -29,7 +29,7 @@ const NavbarLayout = styled.nav`
   @media ${mediaQueries.mobile} {
     text-align: center;
     grid-template-columns: 5fr 2fr;
-    padding: 0 32px;
+    padding: 0 16px;
   }
 
   @media ${mediaQueries.tablet} {
@@ -101,7 +101,7 @@ const Navbar = () => {
           About
         </AnchorLink>
         <AnchorLink title="Employment" to="#employment">
-          Employment History
+          Employment
         </AnchorLink>
         <AnchorLink title="Education" to="#education">
           Education
@@ -124,7 +124,7 @@ const Navbar = () => {
         >
           <FaLinkedinIn size={20} />
         </NavIconOutboundLink>
-        <NavIconOutboundLink href="mailto:itsalysialynn@gmail.com" aria-label="Email Me">
+        <NavIconOutboundLink aria-label="Email Me" href="mailto:itsalysialynn@gmail.com">
           <FaEnvelope size={20} />
         </NavIconOutboundLink>
       </NavigationIcons>
