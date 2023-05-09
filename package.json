@@ -33,7 +33,7 @@
     "gatsby-plugin-react-helmet": "^6.7.0",
     "gatsby-plugin-sharp": "^5.7.0",
     "gatsby-plugin-sitemap": "^6.8.0",
-    "gatsby-plugin-styled-components": "^6.8.0",
+    "gatsby-plugin-styled-components": "^6.9.0",
     "gatsby-remark-emoji": "^0.0.3",
     "gatsby-source-filesystem": "^5.8.0",
     "gatsby-transformer-remark": "^6.8.0",
