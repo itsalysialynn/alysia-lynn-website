@@ -4579,7 +4579,7 @@ __metadata:
     eslint-plugin-styled-components-a11y: ^0.1.0
     gatsby: ^5.8.0
     gatsby-plugin-anchor-links: ^1.2.1
-    gatsby-plugin-google-analytics: ^5.8.0
+    gatsby-plugin-google-analytics: ^5.9.0
     gatsby-plugin-google-fonts: ^1.0.1
     gatsby-plugin-hotjar: ^1.1.1
     gatsby-plugin-image: ^3.7.0
@@ -9124,9 +9124,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-google-analytics@npm:^5.8.0":
-  version: 5.8.0
-  resolution: "gatsby-plugin-google-analytics@npm:5.8.0"
+"gatsby-plugin-google-analytics@npm:^5.9.0":
+  version: 5.9.0
+  resolution: "gatsby-plugin-google-analytics@npm:5.9.0"
   dependencies:
     "@babel/runtime": ^7.20.13
     minimatch: ^3.1.2
@@ -9135,7 +9135,7 @@ __metadata:
     gatsby: ^5.0.0-next
     react: ^18.0.0 || ^0.0.0
     react-dom: ^18.0.0 || ^0.0.0
-  checksum: 8e9ab4ad36fc71cb0887843a1ebb6a8257ac5c36f2a7c7b0d6df9e7094e7fea0564af93bb8cdc35241119844a566d169b408ee08a996887f7fbe94355d99f06a
+  checksum: 06131e2197c8096b31f934e53a224b4793f7f38bcd6cfb4d4dea19a2c4170d59ddb49ec12702cdd35ecaee057ba097e34104e275bd867ad78cea424416b50ef0
   languageName: node
   linkType: hard
 
