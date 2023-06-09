@@ -13,6 +13,10 @@ type ExternalLinkProps = {
   text: string;
 };
 
+const ExternalLinIcon = styled(FiArrowUpRight)`
+  display: inline-block;
+`;
+
 const ExternalLink = ({ text, href }: ExternalLinkProps) => {
   const [isHovering, setIsHovering] = useState<boolean>(false);
 
@@ -25,7 +29,7 @@ const ExternalLink = ({ text, href }: ExternalLinkProps) => {
       rel="noreferrer"
       target="_blank"
     >
-      {text} {isHovering && <FiArrowUpRight />}
+      {text} {isHovering && <ExternalLinIcon />}
     </ExternalOutboundLink>
   );
 };
