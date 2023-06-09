@@ -3,9 +3,9 @@ import { GatsbySeo } from 'gatsby-plugin-next-seo';
 import styled, { ThemeProvider } from 'styled-components';
 
 import useTheme from '../hooks/useTheme';
-import GlobalStyles from '../ui/GlobalStyles';
-import darkTheme from '../ui/themes/darkTheme';
-import lightTheme from '../ui/themes/lightTheme';
+import GlobalStyles from './GlobalStyles';
+import darkTheme from './themes/darkTheme';
+import lightTheme from './themes/lightTheme';
 
 import Footer from './Footer';
 import Navbar, { NAV_HEIGHT } from './Navbar';

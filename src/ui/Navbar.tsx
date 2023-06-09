@@ -4,8 +4,8 @@ import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import styled from 'styled-components';
 
-import { mediaQueries } from '../ui/constants/mediaQueries';
-import Theme from '../ui/themes/Theme';
+import { mediaQueries } from './constants/mediaQueries';
+import Theme from './themes/Theme';
 
 export const NAV_HEIGHT = 64;
 
