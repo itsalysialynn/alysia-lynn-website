@@ -4433,7 +4433,7 @@ __metadata:
     eslint-plugin-react: latest
     eslint-plugin-react-hooks: ^4.6.0
     eslint-plugin-simple-import-sort: ^10.0.0
-    eslint-plugin-styled-components-a11y: ^2.0.1
+    eslint-plugin-styled-components-a11y: ^2.1.0
     gatsby: ^5.10.0
     gatsby-plugin-anchor-links: ^1.2.1
     gatsby-plugin-google-analytics: ^5.9.0
@@ -7848,13 +7848,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-styled-components-a11y@npm:^2.0.1":
-  version: 2.0.1
-  resolution: "eslint-plugin-styled-components-a11y@npm:2.0.1"
+"eslint-plugin-styled-components-a11y@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "eslint-plugin-styled-components-a11y@npm:2.1.0"
   dependencies:
     "@babel/parser": ^7.8.4
     eslint-plugin-jsx-a11y: ^6.2.3
-  checksum: 99c754f3bc8aff9bdb78bd4e262a0ce85adf83b67376899ca5fd255a1ec3658c56e8ade6b629ac542d5800fe16c9ced9659cb69974643a05346b950bf09b7552
+  checksum: c89d85ba7f4d671624542823ee180847eb2cc7488978bb16b808da148f47ebcd05fcdc7068877a95acdc508bbd92a03810db99c3d885195444b8dfb584c111cc
   languageName: node
   linkType: hard
 
