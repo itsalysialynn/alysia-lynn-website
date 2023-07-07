@@ -4,22 +4,6 @@ import colors from './src/ui/atoms/colors';
 const config: GatsbyConfig = {
   graphqlTypegen: true,
   plugins: [
-    {
-      options: {
-        enableWebVitalsTracking: true,
-        head: true,
-        trackingId: 'G-PKP2VXCGDL',
-      },
-      resolve: 'gatsby-plugin-google-analytics',
-    },
-    {
-      options: {
-        id: '3426616',
-        includeInDevelopment: true, // optional parameter to include script in development
-        sv: 6,
-      },
-      resolve: 'gatsby-plugin-hotjar',
-    },
     'gatsby-plugin-image',
     {
       options: {
