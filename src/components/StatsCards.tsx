@@ -62,7 +62,7 @@ const StatsCards = () => (
       </Card>
       <Card>
         <CounterNumber>
-          <CountUp delay={2.4} end={9} start={0} />
+          <CountUp delay={2.4} end={10} start={0} />
         </CounterNumber>
         Udemy Courses Complete
       </Card>
