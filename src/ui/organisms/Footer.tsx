@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { StaticImage } from 'gatsby-plugin-image';
 
 import mediaQueries from '../atoms/mediaQueries';
 
@@ -9,7 +10,7 @@ const LogoLayout = styled.div`
   align-items: center;
 `;
 
-const LogoImage = styled.img`
+const LogoImage = styled(StaticImage)`
   padding-right: 4px;
 `;
 
