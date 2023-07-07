@@ -39,7 +39,7 @@ const Card = styled.div<CardProps>`
 
 const StatsWrapper = styled.div`
   animation-name: ${fadeInUpAnimation};
-  animation-duration: 3s;
+  animation-duration: 1s;
   animation-iteration-count: 1;
 `;
 
@@ -63,25 +63,25 @@ const StatsCards = () => (
     <StatsLayout>
       <Card>
         <CounterNumber>
-          <CountUp delay={2.2} end={new Date().getFullYear() - 2017} start={0} />
+          <CountUp delay={1.2} end={new Date().getFullYear() - 2017} start={0} />
         </CounterNumber>
         Years of Dev Experience
       </Card>
       <Card>
         <CounterNumber>
-          <CountUp delay={2.4} end={10} start={0} />
+          <CountUp delay={1.4} end={10} start={0} />
         </CounterNumber>
         Udemy Courses Complete
       </Card>
       <Card>
         <CounterNumber>
-          <CountUp delay={2.6} end={4} start={0} />
+          <CountUp delay={1.6} end={4} start={0} />
         </CounterNumber>
         Dev Books Read in 2023
       </Card>
       <Card>
         <CounterNumber>
-          <CountUp delay={2} end={1} start={0} />
+          <CountUp delay={1} end={1} start={0} />
         </CounterNumber>
         Web Dev Bootcamp
       </Card>
