@@ -52,6 +52,12 @@ const config: GatsbyConfig = {
       },
       resolve: 'gatsby-plugin-anchor-links',
     },
+    {
+      options: {
+        devMode: true,
+      },
+      resolve: 'gatsby-plugin-webpack-bundle-analyser-v2',
+    },
   ],
   siteMetadata: {
     siteUrl: 'https://www.alysia-lynn.com',

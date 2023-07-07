@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { FiArrowUpRight } from 'react-icons/fi';
 import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import styled from 'styled-components';
+
+import ArrowUpRight from '../atoms/icons/ArrowUpRight ';
 
 const ExternalOutboundLink = styled(OutboundLink)`
   display: flex;
@@ -13,7 +14,7 @@ type ExternalLinkProps = {
   text: string;
 };
 
-const ExternalLinIcon = styled(FiArrowUpRight)`
+const ExternalLinkIcon = styled(ArrowUpRight)`
   display: inline-block;
 `;
 
@@ -29,7 +30,7 @@ const ExternalLink = ({ text, href }: ExternalLinkProps) => {
       rel="noreferrer"
       target="_blank"
     >
-      {text} {isHovering && <ExternalLinIcon />}
+      {text} {isHovering && <ExternalLinkIcon />}
     </ExternalOutboundLink>
   );
 };

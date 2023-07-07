@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { FaEnvelope, FaGithubAlt, FaLinkedinIn } from 'react-icons/fa';
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import styled from 'styled-components';
 
+import Envelope from '../atoms/icons/Envelope';
+import Github from '../atoms/icons/Github';
+import Linkedin from '../atoms/icons/Linkedin';
 import mediaQueries from '../atoms/mediaQueries';
 import Theme from '../themes/Theme';
 
@@ -118,7 +120,7 @@ const Navbar = () => {
           rel="noreferrer"
           target="_blank"
         >
-          <FaGithubAlt size={20} />
+          <Github />
         </NavIconOutboundLink>
         <NavIconOutboundLink
           aria-label="Linkedin"
@@ -126,10 +128,10 @@ const Navbar = () => {
           rel="noreferrer"
           target="_blank"
         >
-          <FaLinkedinIn size={20} />
+          <Linkedin />
         </NavIconOutboundLink>
         <NavIconOutboundLink aria-label="Email Me" href="mailto:itsalysialynn@gmail.com">
-          <FaEnvelope size={20} />
+          <Envelope />
         </NavIconOutboundLink>
       </NavigationIcons>
     </NavbarLayout>
