@@ -36,6 +36,7 @@ const Footer = () => (
         alt="Trash on fire"
         height={24}
         src="https://www.morganti.dev/images/favicon.gif"
+        width={24}
       />
       <p>
         Built on

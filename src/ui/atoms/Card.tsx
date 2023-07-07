@@ -1,7 +1,6 @@
-import React, { ReactNode, useCallback, useEffect } from 'react';
+import React, { ReactNode } from 'react';
 import styled from 'styled-components';
 
-import { NAV_HEIGHT } from '../organisms/Navbar';
 import Theme from '../themes/Theme';
 
 import mediaQueries from './mediaQueries';
@@ -35,47 +34,17 @@ const CardYearRange = styled.div`
 type CardProps = {
   children: ReactNode;
   header: string;
-  id: string;
   yearRange: string;
 };
 
-const Card = ({ children, header, yearRange, id }: CardProps) => {
-  const handleFadeOut = useCallback(() => {
-    const element = document.getElementById(id);
-    if (element) {
-      const distanceToTop = window.pageYOffset + element.getBoundingClientRect().top - NAV_HEIGHT;
-      const elementHeight = element.offsetHeight;
-      const { scrollTop } = document.documentElement;
-
-      let opacity = 1;
-
-      if (scrollTop > distanceToTop) {
-        opacity = 1 - (scrollTop - distanceToTop) / elementHeight;
-      }
-
-      if (opacity >= 0) {
-        element.style.opacity = opacity.toString();
-      }
-    }
-  }, [id]);
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleFadeOut);
-
-    return () => {
-      window.removeEventListener('scroll', handleFadeOut);
-    };
-  }, [handleFadeOut]);
-
-  return (
-    <CardLayout>
-      <CardHeaderLayout>
-        <h4>{header}</h4>
-        <CardYearRange>{yearRange}</CardYearRange>
-      </CardHeaderLayout>
-      {children}
-    </CardLayout>
-  );
-};
+const Card = ({ children, header, yearRange }: CardProps) => (
+  <CardLayout>
+    <CardHeaderLayout>
+      <h3>{header}</h3>
+      <CardYearRange>{yearRange}</CardYearRange>
+    </CardHeaderLayout>
+    {children}
+  </CardLayout>
+);
 
 export default Card;

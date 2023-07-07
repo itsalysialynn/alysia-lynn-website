@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useCallback, useEffect } from 'react';
 import styled, { keyframes } from 'styled-components';
 
 const animation = keyframes`
@@ -28,7 +28,8 @@ const TextLoop = ({ textArray }: TextLoopProps) => {
       element.innerHTML = text;
     }
   };
-  const loopText = () => {
+
+  const loopText = useCallback(() => {
     let displayIndex = 0;
     const delay = 3000;
 
@@ -41,7 +42,7 @@ const TextLoop = ({ textArray }: TextLoopProps) => {
         displayIndex = 0;
       }
     }, delay);
-  };
+  }, [textArray]);
 
   useEffect(() => {
     setText(textArray[textArray.length - 1]);
