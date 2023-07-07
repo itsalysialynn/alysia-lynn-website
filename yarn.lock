@@ -3832,7 +3832,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:>=10.0.0":
+"@types/node@npm:*, @types/node@npm:>=10.0.0, @types/node@npm:^20.4.0":
   version: 20.4.0
   resolution: "@types/node@npm:20.4.0"
   checksum: 8ad632ee131611651fc5f4ac3a47427640e2492ab314fe1c4d0c3b97af71784ef48c53221d5f9922aab4724375dcb4f33137b3107ba2c356d9366216a31678aa
@@ -3843,13 +3843,6 @@ __metadata:
   version: 17.0.45
   resolution: "@types/node@npm:17.0.45"
   checksum: aa04366b9103b7d6cfd6b2ef64182e0eaa7d4462c3f817618486ea0422984c51fc69fd0d436eae6c9e696ddfdbec9ccaa27a917f7c2e8c75c5d57827fe3d95e8
-  languageName: node
-  linkType: hard
-
-"@types/node@npm:^18.15.3":
-  version: 18.16.19
-  resolution: "@types/node@npm:18.16.19"
-  checksum: 63c31f09616508aa7135380a4c79470a897b75f9ff3a70eb069e534dfabdec3f32fb0f9df5939127f1086614d980ddea0fa5e8cc29a49103c4f74cd687618aaf
   languageName: node
   linkType: hard
 
@@ -4535,7 +4528,7 @@ __metadata:
     "@babel/preset-typescript": ^7.21.0
     "@testing-library/react": ^14.0.0
     "@types/jest": ^29.5.0
-    "@types/node": ^18.15.3
+    "@types/node": ^20.4.0
     "@types/react": ^18.0.35
     "@types/react-countup": ^4.3.1
     "@types/react-dom": ^18.2.4
