@@ -1,4 +1,5 @@
-Accept-Encoding: gzip
+/*
+  Accept-Encoding: gzip
 
 /fonts/*
   Cache-Control: public
