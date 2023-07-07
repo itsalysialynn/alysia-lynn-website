@@ -32,7 +32,6 @@ const config: GatsbyConfig = {
       resolve: 'gatsby-plugin-manifest',
     },
     'gatsby-plugin-mdx',
-    'gatsby-plugin-next-seo',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sharp',
     'gatsby-plugin-sitemap',
