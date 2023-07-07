@@ -1,4 +1,5 @@
 import type { GatsbyConfig } from 'gatsby';
+import colors from './src/ui/atoms/colors';
 
 const config: GatsbyConfig = {
   graphqlTypegen: true,
@@ -24,10 +25,10 @@ const config: GatsbyConfig = {
       options: {
         background_color: '#FFFFFF',
         display: 'standalone',
-        icon: 'src/images/icon.png',
+        icon: 'src/images/favicon.ico',
         name: 'Alysia Lynn',
         start_url: '/',
-        theme_color: '#6E00FF',
+        theme_color: colors.grape,
       },
       resolve: 'gatsby-plugin-manifest',
     },
