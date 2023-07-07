@@ -71,10 +71,10 @@ const config: GatsbyConfig = {
     author: 'Alysia Lynn',
     description:
       "Hi, I'm Alysia, and I am a web and mobile developer based out of Squamish, BC, Canada.",
-    image: '/meta-image.png',
+    image: 'meta-image.png',
     siteUrl: 'https://www.alysia-lynn.com',
     title: 'Alysia Lynn',
-    twitterImage: '/twitter-image.png',
+    twitterImage: 'twitter-image.png',
   },
 };
 
