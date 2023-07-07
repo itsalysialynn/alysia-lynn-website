@@ -18,7 +18,7 @@ const EmploymentSection = () => (
       <h2>Employment History</h2>
       {employmentHistory.map(
         ({ company, companyHref, endYear, startYear, title, accomplishments }, index) => (
-          <Card header={title} yearRange={formatYearRange(startYear, endYear)}>
+          <Card key={index} header={title} yearRange={formatYearRange(startYear, endYear)}>
             <ExternalLink href={companyHref} text={company} />
             <ul>
               {accomplishments.map((accomplishment, accomplishmentIndex) => (

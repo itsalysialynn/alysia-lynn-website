@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { StaticImage } from 'gatsby-plugin-image';
+// @ts-ignore
+import trashFire from '../../gifs/trash.gif';
 
 import mediaQueries from '../atoms/mediaQueries';
 
@@ -10,7 +11,7 @@ const LogoLayout = styled.div`
   align-items: center;
 `;
 
-const LogoImage = styled(StaticImage)`
+const LogoImage = styled.img`
   padding-right: 4px;
 `;
 
@@ -33,12 +34,7 @@ const Footer = () => (
     <p>Made with 💜 by Alysia Lynn</p>
     <p>Copyright © {new Date().getFullYear()}. All rights reserved.</p>
     <LogoLayout>
-      <LogoImage
-        alt="Trash on fire"
-        height={24}
-        src="https://www.morganti.dev/images/favicon.gif"
-        width={24}
-      />
+      <LogoImage alt="Trash on fire" height={24} src={trashFire} width={24} />
       <p>
         Built on
         <a href="https://www.morganti.dev/"> Mikefrastructure</a>

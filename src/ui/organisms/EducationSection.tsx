@@ -17,7 +17,7 @@ const EducationSection = () => (
     <h2>Education</h2>
     {educationHistory.map(
       ({ course, courseHref, endYear, school, startYear, description }, index) => (
-        <Card header={school} yearRange={formatYearRange(startYear, endYear)}>
+        <Card key={index} header={school} yearRange={formatYearRange(startYear, endYear)}>
           <ExternalLink href={courseHref} text={course} />
           <p>{widont(description)}</p>
         </Card>
