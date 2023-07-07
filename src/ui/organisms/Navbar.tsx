@@ -4,7 +4,7 @@ import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import styled from 'styled-components';
 
-import { mediaQueries } from '../atoms/mediaQueries';
+import mediaQueries from '../atoms/mediaQueries';
 import Theme from '../themes/Theme';
 
 export const NAV_HEIGHT = 64;
@@ -26,24 +26,28 @@ const NavbarLayout = styled.nav`
   display: grid;
   align-items: center;
 
-  @media ${mediaQueries.mobile} {
+  ${mediaQueries.mobile`
     text-align: center;
     grid-template-columns: 5fr 2fr;
     padding: 0 16px;
-  }
+  `}
 
-  @media ${mediaQueries.tablet} {
+  ${mediaQueries.tablet`
     text-align: center;
     grid-template-columns: 5fr 2fr;
-    padding: 0 32px;
-  }
+    padding: 0 24px;
+  `}
 
-  @media ${mediaQueries.ld} {
+  ${mediaQueries.laptop`
     grid-template-columns: 2fr 1fr;
     padding: 0 128px;
-  }
-  
+  `}
 
+  ${mediaQueries.desktop`
+    grid-template-columns: 2fr 1fr;
+    padding: 0 160px;
+  `}
+  
   } a {
     color: ${({ theme }: NavbarLayoutProps) => theme.nav.hyperlink.color};
 
@@ -66,17 +70,17 @@ const NavigationIcons = styled.div`
   align-items: center;
   justify-content: flex-end;
 
-  @media ${mediaQueries.mobile} {
+  ${mediaQueries.mobile`
     grid-gap: 8px;
-  }
+  `}
 
-  @media ${mediaQueries.tablet} {
+  ${mediaQueries.tablet`
     grid-gap: 16px;
-  }
+  `}
 
-  @media ${mediaQueries.ld} {
+  ${mediaQueries.desktop`
     grid-gap: 24px;
-  }
+  `}
 `;
 
 const NavIconOutboundLink = styled(OutboundLink)`
@@ -97,13 +101,13 @@ const Navbar = () => {
   return (
     <NavbarLayout isTopOfPage={isTopOfPage}>
       <NavigationItems>
-        <AnchorLink title="About" to="#about">
+        <AnchorLink title="About" to="/#about">
           About
         </AnchorLink>
-        <AnchorLink title="Employment" to="#employment">
+        <AnchorLink title="Employment" to="/#employment">
           Employment
         </AnchorLink>
-        <AnchorLink title="Education" to="#education">
+        <AnchorLink title="Education" to="/#education">
           Education
         </AnchorLink>
       </NavigationItems>

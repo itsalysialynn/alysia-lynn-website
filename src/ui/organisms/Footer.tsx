@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { mediaQueries } from '../atoms/mediaQueries';
+import mediaQueries from '../atoms/mediaQueries';
 
 const LogoLayout = styled.div`
   display: flex;
@@ -17,21 +17,15 @@ const FooterLayout = styled.footer`
   align-items: center;
   display: flex;
   justify-content: space-between;
-  padding: 24px;
+  padding: 16px 0;
 
-  @media ${mediaQueries.mobile} {
-    padding: 16px;
+  ${mediaQueries.mobile`
     flex-direction: column;
-    grid-gap: 8px;
-  }
-  ≥//
-  @media ${mediaQueries.tablet} {
-    padding: 32px;
-  }
+  `}
 
-  @media ${mediaQueries.ld} {
-    padding: 32px 128px;
-  }
+  ${mediaQueries.tablet`
+    flex-direction: column;
+  `}
 `;
 const Footer = () => (
   <FooterLayout>

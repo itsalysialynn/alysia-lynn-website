@@ -1,43 +1,85 @@
 import React, { ReactNode } from 'react';
-import { GatsbySeo } from 'gatsby-plugin-next-seo';
 import styled, { ThemeProvider } from 'styled-components';
 
+import AppHelmet from '../AppHelmet';
 import useTheme from '../hooks/useTheme';
-import GlobalStyles from '../ui/atoms/GlobalStyles';
-import Footer from '../ui/molecules/Footer';
-import Navbar, { NAV_HEIGHT } from '../ui/molecules/Navbar';
+import GlobalStyle from '../ui/atoms/GlobalStyle';
+import mediaQueries from '../ui/atoms/mediaQueries';
+import Footer from '../ui/organisms/Footer';
+import Navbar, { NAV_HEIGHT } from '../ui/organisms/Navbar';
 import darkTheme from '../ui/themes/darkTheme';
 import lightTheme from '../ui/themes/lightTheme';
 
+const PageLayout = styled.div`
+  ${mediaQueries.mobile`
+    padding: 0 16px;
+  `}
+
+  ${mediaQueries.tablet`
+    padding: 0 24px;
+  `}
+
+  ${mediaQueries.laptop`
+    padding: 0 128px;
+  `}
+
+  ${mediaQueries.desktop`
+    padding: 0 160px;
+  `}
+`;
+
 const PageWrapper = styled.div`
-  padding-top: ${NAV_HEIGHT}px;
+  margin-top: ${NAV_HEIGHT}px;
 `;
 
 type LayoutProps = {
   children: ReactNode;
-  description: string;
-  nofollow?: boolean;
-  title: string;
+  description?: string | undefined | null;
+  robotMetaContent?: string | undefined | null;
+  title?: string | undefined | null;
+  schemaMarkup?: object;
+  author?: string | undefined | null;
 };
 
-const Layout = ({ children, description, nofollow, title }: LayoutProps) => {
+const Layout = ({
+  children,
+  description,
+  robotMetaContent,
+  title,
+  schemaMarkup,
+  author,
+}: LayoutProps) => {
   const { isDarkTheme } = useTheme();
-
   return (
-    <PageWrapper>
-      <GatsbySeo description={description} nofollow={nofollow} title={title} />
-      <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
-        <GlobalStyles />
-        <Navbar />
-        {children}
-        <Footer />
-      </ThemeProvider>
-    </PageWrapper>
+    <>
+      <AppHelmet
+        author={author}
+        description={description}
+        robotMetaContent={robotMetaContent}
+        schemaMarkup={schemaMarkup}
+        title={title}
+      />
+
+      <PageWrapper>
+        <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
+          <GlobalStyle />
+          <PageLayout>
+            <Navbar />
+            <main role="main">{children}</main>
+            <Footer />
+          </PageLayout>
+        </ThemeProvider>
+      </PageWrapper>
+    </>
   );
 };
 
 Layout.defaultProps = {
-  nofollow: false,
+  author: undefined,
+  description: undefined,
+  robotMetaContent: undefined,
+  schemaMarkup: {},
+  title: undefined,
 };
 
 export default Layout;

@@ -2,7 +2,7 @@ import { createGlobalStyle } from 'styled-components';
 
 import Theme from '../themes/Theme';
 
-import { mediaQueries } from './mediaQueries';
+import mediaQueries from './mediaQueries';
 
 type GlobalStyleProps = {
   theme: Theme;
@@ -19,43 +19,52 @@ const GlobalStyle = createGlobalStyle`
   body {
     background-color: ${({ theme }: GlobalStyleProps) => theme.backgroundColor};
     color: ${({ theme }: GlobalStyleProps) => theme.color};
-    font-size: 16px;
+    font-size: 1rem;
     margin: 0;
 
     h1 {
-      font-size: 80px;
+      font-size: 5rem;
       letter-spacing: -.02em;
       font-weight: 800;
       margin: 0;
+
+      ${mediaQueries.mobile`
+        font-size: 2.5rem;
+      `}
+
+      ${mediaQueries.tablet`
+        font-size: 3rem;
+      `}
     }
 
     h2 {
-      font-size: 40px;
+      font-size: 3rem;
       margin: 0;
       font-weight: 700;
-      
-      @media ${mediaQueries.mobile} {
-        font-size: 32px;
-      }
+
+      ${mediaQueries.mobile`
+        font-size: 2rem;
+      `}
+
+      ${mediaQueries.tablet`
+        font-size: 2rem;
+      `}
     }
 
     h3 {
-      font-size: 24px;
+      font-size: 2rem;
       font-weight: 600;
       margin: 0;
     }
 
     h4 {
       font-weight: bold;
+      font-size: 1rem;
       margin: 0;
     }
 
     p {
       margin: 0;
-    }
-
-    main {
-      height: 100%;
     }
 
     a {
@@ -70,7 +79,6 @@ const GlobalStyle = createGlobalStyle`
         color: ${({ theme }: GlobalStyleProps) => theme.hyperlink.hover};
       }
     }
-
 
     ul {
       list-style-type: "- ";

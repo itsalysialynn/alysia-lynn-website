@@ -1,15 +1,23 @@
 import React from 'react';
 import CountUp from 'react-countup';
-import { MotionAnimate } from 'react-motion-animate';
 import styled from 'styled-components';
 
-import colors from '../ui/atoms/colors';
-import { mediaQueries } from '../ui/atoms/mediaQueries';
-import Theme from '../ui/themes/Theme';
+import colors from '../atoms/colors';
+import fadeInUpAnimation from '../atoms/fadeInUpAnimation';
+import mediaQueries from '../atoms/mediaQueries';
+import Theme from '../themes/Theme';
 
 const CounterNumber = styled.h2`
   color: ${colors.sunrise};
-  font-size: 56px;
+  font-size: 5rem;
+
+  ${mediaQueries.tablet`
+    font-size: 4rem;
+  `}
+
+  ${mediaQueries.mobile`
+    font-size: 4rem;
+  `}
 `;
 
 type CardProps = {
@@ -21,38 +29,37 @@ const Card = styled.div<CardProps>`
   border-radius: 4px;
   display: flex;
   align-items: center;
-  grid-gap: 8px;
+  grid-gap: 16px;
+  padding: 16px;
 
-  @media ${mediaQueries.mobile} {
+  ${mediaQueries.mobile`
     grid-gap: 8px;
-    padding: 16px;
-  }
+  `}
+`;
 
-  @media ${mediaQueries.tablet} {
-    grid-gap: 16px;
-    padding: 24px;
-  }
+const StatsWrapper = styled.div`
+  animation-name: ${fadeInUpAnimation};
+  animation-duration: 3s;
+  animation-iteration-count: 1;
 `;
 
 const StatsLayout = styled.div`
   display: grid;
   grid-gap: 8px;
 
-  @media ${mediaQueries.mobile} {
+  ${mediaQueries.mobile`
+    grid-template-columns: 1fr;
+  `} ${mediaQueries.tablet`
     grid-template-columns: 1fr 1fr;
-  }
-
-  @media ${mediaQueries.tablet} {
+  `} ${mediaQueries.laptop`
     grid-template-columns: 1fr 1fr;
-  }
-
-  @media ${mediaQueries.ld} {
+  `} ${mediaQueries.desktop`
     grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
+  `};
 `;
 
 const StatsCards = () => (
-  <MotionAnimate animation="fadeInUp" delay={1} distance={100} reset speed={2}>
+  <StatsWrapper>
     <StatsLayout>
       <Card>
         <CounterNumber>
@@ -79,7 +86,7 @@ const StatsCards = () => (
         Web Dev Bootcamp
       </Card>
     </StatsLayout>
-  </MotionAnimate>
+  </StatsWrapper>
 );
 
 export default StatsCards;

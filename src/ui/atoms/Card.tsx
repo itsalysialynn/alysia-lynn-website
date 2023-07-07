@@ -1,10 +1,10 @@
 import React, { ReactNode, useCallback, useEffect } from 'react';
 import styled from 'styled-components';
 
-import { NAV_HEIGHT } from '../molecules/Navbar';
+import { NAV_HEIGHT } from '../organisms/Navbar';
 import Theme from '../themes/Theme';
 
-import { mediaQueries } from './mediaQueries';
+import mediaQueries from './mediaQueries';
 
 type CardLayoutProps = {
   theme: Theme;
@@ -17,13 +17,9 @@ const CardLayout = styled.div<CardLayoutProps>`
   grid-gap: 8px;
   padding: 24px;
 
-  @media ${mediaQueries.mobile} {
+  ${mediaQueries.mobile`
     padding: 16px;
-  }
-
-  @media ${mediaQueries.tablet} {
-    padding: 24px;
-  }
+  `}
 `;
 
 const CardHeaderLayout = styled.div`
@@ -72,7 +68,7 @@ const Card = ({ children, header, yearRange, id }: CardProps) => {
   }, [handleFadeOut]);
 
   return (
-    <CardLayout id={id}>
+    <CardLayout>
       <CardHeaderLayout>
         <h4>{header}</h4>
         <CardYearRange>{yearRange}</CardYearRange>

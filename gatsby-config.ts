@@ -33,13 +33,6 @@ const config: GatsbyConfig = {
     },
     'gatsby-plugin-mdx',
     'gatsby-plugin-next-seo',
-    {
-      options: {
-        display: 'swap',
-        fonts: ['inter:300,400,500,600,700'],
-      },
-      resolve: 'gatsby-plugin-google-fonts',
-    },
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sharp',
     'gatsby-plugin-sitemap',
@@ -68,6 +61,12 @@ const config: GatsbyConfig = {
       resolve: 'gatsby-transformer-remark',
     },
     'gatsby-transformer-sharp',
+    {
+      options: {
+        offset: -75,
+      },
+      resolve: 'gatsby-plugin-anchor-links',
+    },
   ],
   siteMetadata: {
     siteUrl: 'https://www.alysia-lynn.com',

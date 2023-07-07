@@ -1,12 +1,11 @@
 import React from 'react';
-import { MotionAnimate } from 'react-motion-animate';
 import styled from 'styled-components';
 
-import employmentHistory from '../data/employmentHistory';
-import formatYearRange from '../helpers/formatYearRange';
-import Card from '../ui/atoms/Card';
-import Section from '../ui/atoms/Section';
-import ExternalLink from '../ui/molecules/ExternalLink';
+import employmentHistory from '../../data/employmentHistory';
+import formatYearRange from '../../helpers/formatYearRange';
+import Card from '../atoms/Card';
+import Section from '../atoms/Section';
+import ExternalLink from '../molecules/ExternalLink';
 
 const EmploymentSectionLayout = styled.div`
   display: grid;
@@ -16,9 +15,7 @@ const EmploymentSectionLayout = styled.div`
 const EmploymentSection = () => (
   <Section id="employment">
     <EmploymentSectionLayout>
-      <MotionAnimate animation="fadeInUp" delay={1} distance={50} reset speed={1}>
-        <h2>Employment History</h2>
-      </MotionAnimate>
+      <h2>Employment History</h2>
       {employmentHistory.map(
         ({ company, companyHref, endYear, startYear, title, accomplishments }, index) => (
           <Card

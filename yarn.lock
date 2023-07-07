@@ -4563,7 +4563,6 @@ __metadata:
     gatsby: ^5.10.0
     gatsby-plugin-anchor-links: ^1.2.1
     gatsby-plugin-google-analytics: ^5.9.0
-    gatsby-plugin-google-fonts: ^1.0.1
     gatsby-plugin-hotjar: ^1.1.1
     gatsby-plugin-image: ^3.9.0
     gatsby-plugin-manifest: ^5.8.0
@@ -4591,7 +4590,6 @@ __metadata:
     react-motion: ^0.5.2
     react-motion-animate: ^1.0.6
     react-testing-library: ^8.0.1
-    react-text-loop: ^2.3.0
     styled-components: ^5.3.9
     ts-jest: ^29.0.5
     typescript: ^5.0.2
@@ -6710,13 +6708,6 @@ __metadata:
   version: 3.1.2
   resolution: "csstype@npm:3.1.2"
   checksum: e1a52e6c25c1314d6beef5168da704ab29c5186b877c07d822bd0806717d9a265e8493a2e35ca7e68d0f5d472d43fac1cdce70fd79fd0853dff81f3028d857b5
-  languageName: node
-  linkType: hard
-
-"cxs@npm:^6.2.0":
-  version: 6.2.0
-  resolution: "cxs@npm:6.2.0"
-  checksum: 792f070d9f2f5144c5ed9e03db8b7e53310217db7149fc2131cd376936ae7d26edb0fa31a4dfa6ccea595f6cddc134ac6c51fa077b1c848bb9a409f0b525f568
   languageName: node
   linkType: hard
 
@@ -9180,13 +9171,6 @@ __metadata:
     react: ^18.0.0 || ^0.0.0
     react-dom: ^18.0.0 || ^0.0.0
   checksum: 147049b875c6f8e55982ff21d676b60b971ce01a029957d8cee08fc0050bfc0dd6054d33ea536806f2a3246bf84b5170e39b3342f0512aedbe39b291d9370ec9
-  languageName: node
-  linkType: hard
-
-"gatsby-plugin-google-fonts@npm:^1.0.1":
-  version: 1.0.1
-  resolution: "gatsby-plugin-google-fonts@npm:1.0.1"
-  checksum: 775aee252ee1bf7d77ae6ffd8cd44e14ee3badfab4f46c3ed2a438527894cbffe9383464073e33ae5b2442d70b2434df1358749f5c2e575538143508ff68a1b5
   languageName: node
   linkType: hard
 
@@ -15677,13 +15661,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-fast-compare@npm:2.0.4":
-  version: 2.0.4
-  resolution: "react-fast-compare@npm:2.0.4"
-  checksum: 06046595f90a4e3e3a56f40a8078c00aa71bdb064ddb98343f577f546aa22e888831fd45f009c93b34707cc842b4c637737e956fd13d6f80607ee92fb9cf9a1c
-  languageName: node
-  linkType: hard
-
 "react-fast-compare@npm:^3.1.1, react-fast-compare@npm:^3.2.0":
   version: 3.2.2
   resolution: "react-fast-compare@npm:3.2.2"
@@ -15809,20 +15786,6 @@ __metadata:
   version: 8.0.1
   resolution: "react-testing-library@npm:8.0.1"
   checksum: b2f03584b0ec18b2377e26ad9469eb484c4f36e1b4ff9205448792513fe7bb69fbb0346e5b87c3b9d6893aefcb94d117bdc500dcd04083ff6bffa0c49d141077
-  languageName: node
-  linkType: hard
-
-"react-text-loop@npm:^2.3.0":
-  version: 2.3.0
-  resolution: "react-text-loop@npm:2.3.0"
-  dependencies:
-    cxs: ^6.2.0
-    react-fast-compare: 2.0.4
-    react-motion: ^0.5.2
-  peerDependencies:
-    react: ^15.0.1 || ^16.0.1
-    react-dom: ^15.0.1 || ^16.0.1
-  checksum: 8bf07265b35866d2ac086eceb40a8d6b9db8838b8047cef15ef4a9e5081aa7aa2c2fe51e7aa4c17ee379ac75f44cf16c2d541d3da134e8981b515bb36c499b9b
   languageName: node
   linkType: hard
 
