@@ -12,7 +12,7 @@ import lightTheme from '../ui/themes/lightTheme';
 
 const PageLayout = styled.div`
   ${mediaQueries.mobile`
-    padding: 0 16px;
+    padding: 0 8px;
   `}
 
   ${mediaQueries.tablet`

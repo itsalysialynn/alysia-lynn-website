@@ -29,7 +29,7 @@ const NavbarLayout = styled.nav`
   ${mediaQueries.mobile`
     text-align: center;
     grid-template-columns: 5fr 2fr;
-    padding: 0 16px;
+    padding: 0 8px;
   `}
 
   ${mediaQueries.tablet`
