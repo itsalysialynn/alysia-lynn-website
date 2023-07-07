@@ -48,6 +48,7 @@ const meta = (
   { content: author, property: 'article:author' },
 ];
 
+// DO THESE NEXT
 const link = [
   { href: '/icons/favicon-16x16.png', rel: 'icon', size: '16x16', type: 'image/png' },
   { href: '/icons/favicon-32x32.png', rel: 'icon', size: '32x32', type: 'image/png' },
