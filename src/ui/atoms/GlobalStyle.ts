@@ -30,10 +30,12 @@ const GlobalStyle = createGlobalStyle`
 
       ${mediaQueries.mobile`
         font-size: 2.5rem;
+        font-weight: 800;
       `}
 
       ${mediaQueries.tablet`
         font-size: 3rem;
+        font-weight: 800;
       `}
     }
 
