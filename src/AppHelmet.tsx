@@ -67,7 +67,7 @@ const link = [
   {
     as: 'font',
     crossorigin: 'anonymous',
-    href: '/fonts/Domine.woff2',
+    href: '/fonts/Inter.woff2',
     rel: 'preload',
     type: 'font/woff2',
   },
