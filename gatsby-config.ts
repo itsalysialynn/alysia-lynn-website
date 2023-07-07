@@ -58,16 +58,13 @@ const config: GatsbyConfig = {
       },
       resolve: 'gatsby-plugin-webpack-bundle-analyser-v2',
     },
-    {
-      options: {
-        extensions: ['css', 'html', 'js', 'svg'],
-      },
-      resolve: 'gatsby-plugin-zopfli',
-    },
   ],
   siteMetadata: {
     siteUrl: 'https://www.alysia-lynn.com',
-    title: 'alysia-lynn',
+    title: 'Alysia Lynn',
+    image: '/meta-image.png',
+    description:
+      "Hi, I'm Alysia, and I am a web and mobile developer based out of Squamish, BC, Canada.",
   },
 };
 

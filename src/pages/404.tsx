@@ -14,11 +14,7 @@ const NotFoundSection = styled(Section)`
 `;
 
 const NotFoundPage = () => (
-  <Layout
-    description="Hi, I'm Alysia, and I am a web and mobile developer based out of Squamish, British Columbia, Canada."
-    robotMetaContent="noindex, nofollow"
-    title="Not Found | Alysia Lynn"
-  >
+  <Layout robotMetaContent="noindex, nofollow" title="Not Found | Alysia Lynn">
     <NotFoundSection>
       <h1>This page is not found</h1>
       <Link to="/">Go Home</Link>
