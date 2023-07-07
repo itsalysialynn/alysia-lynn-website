@@ -5,10 +5,11 @@ import colors from './src/ui/atoms/colors';
 const config: GatsbyConfig = {
   graphqlTypegen: true,
   plugins: [
+    'gatsby-plugin-catch-links',
     'gatsby-plugin-image',
     {
       options: {
-        background_color: '#FFFFFF',
+        background_color: colors.white,
         display: 'standalone',
         icon: 'src/images/favicon.ico',
         name: 'Alysia Lynn',
@@ -19,7 +20,14 @@ const config: GatsbyConfig = {
     },
     'gatsby-plugin-mdx',
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-sharp',
+    {
+      options: {
+        defaults: {
+          placeholder: 'none',
+        },
+      },
+      resolve: 'gatsby-plugin-sharp',
+    },
     'gatsby-plugin-sitemap',
     {
       __key: 'images',
@@ -60,11 +68,13 @@ const config: GatsbyConfig = {
     },
   ],
   siteMetadata: {
-    siteUrl: 'https://www.alysia-lynn.com',
-    title: 'Alysia Lynn',
-    image: '/meta-image.png',
+    author: 'Alysia Lynn',
     description:
       "Hi, I'm Alysia, and I am a web and mobile developer based out of Squamish, BC, Canada.",
+    image: '/meta-image.png',
+    siteUrl: 'https://www.alysia-lynn.com',
+    title: 'Alysia Lynn',
+    twitterImage: '/twitter-image.png',
   },
 };
 

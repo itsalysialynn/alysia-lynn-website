@@ -2,36 +2,23 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { graphql, Script, useStaticQuery } from 'gatsby';
 
-export const normalizePath = (path) => {
-  let normalizedPath = path;
-
-  // Add leading slash if not present
-  if (!/^\//.test(normalizedPath)) {
-    normalizedPath = `/${normalizedPath}`;
-  }
-
-  // Add trailing slash if not present
-  if (!/\/$/.test(normalizedPath)) {
-    normalizedPath = `${normalizedPath}/`;
-  }
-
-  return normalizedPath;
-};
+import colors from './ui/atoms/colors';
+import googleTagManager from './vendor/googleTagManager';
 
 const meta = (
   description: string,
   image: string,
   title: string,
   robotMetaContent: string,
+  siteUrl: string,
+  twitterImage: string,
   author: string,
 ) => [
-  { content: '#000000', name: 'theme-color' },
-  { content: '', name: 'msapplication-config' },
-  { content: '//alysia-lynn.com/', name: 'twitter:url' },
+  { content: colors.leaf, name: 'theme-color' },
+  { content: siteUrl, name: 'twitter:url' },
   { content: '/browserconfig.xml', name: 'msapplication-config' },
-  { content: 'Plant Co.', property: 'og:site_name' },
-  { content: 'lmkytwedo0gtph86853ussgdc8rae2', name: 'facebook-domain-verification' },
-  { content: 'summary_large_image', name: 'twitter:card' },
+  { content: title, property: 'og:site_name' },
+  { content: 'summary', name: 'twitter:card' },
   { content: 'v_6Zz79WDK2YFfihNnw4GBmxrQ7hNOrrx8utRsMwb94', name: 'google-site-verification' },
   {
     content: 'width=device-width, initial-scale=1, shrink-to-fit=no user-scalable=no',
@@ -40,7 +27,7 @@ const meta = (
   { content: description, name: 'description' },
   { content: description, name: 'twitter:description' },
   { content: description, property: 'og:description' },
-  { content: image, name: 'twitter:image' },
+  { content: twitterImage, name: 'twitter:image' },
   { content: image, property: 'og:image' },
   { content: robotMetaContent, name: 'robots' },
   { content: title, name: 'twitter:title' },
@@ -48,7 +35,6 @@ const meta = (
   { content: author, property: 'article:author' },
 ];
 
-// DO THESE NEXT
 const link = [
   { href: '/icons/favicon-16x16.png', rel: 'icon', size: '16x16', type: 'image/png' },
   { href: '/icons/favicon-32x32.png', rel: 'icon', size: '32x32', type: 'image/png' },
@@ -60,7 +46,7 @@ const link = [
     type: 'image/png',
   },
   {
-    color: '#098b8c',
+    color: colors.galaxy,
     href: '/icons/safari-pinned-tab.png',
     rel: 'mask-icon',
   },
@@ -79,16 +65,9 @@ type AppHelmetProps = {
   title?: string | undefined | null;
   robotMetaContent?: string | undefined | null;
   schemaMarkup?: object;
-  author?: string | undefined | null;
 };
 
-const AppHelmet = ({
-  description,
-  title,
-  robotMetaContent,
-  schemaMarkup,
-  author,
-}: AppHelmetProps) => {
+const AppHelmet = ({ description, title, robotMetaContent, schemaMarkup }: AppHelmetProps) => {
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -96,12 +75,22 @@ const AppHelmet = ({
           title
           description
           siteUrl
+          twitterImage
+          image
+          author
         }
       }
     }
   `);
 
-  const { title: defaultTitle, description: defaultDescription, image } = data.site.siteMetadata;
+  const {
+    title: defaultTitle,
+    description: defaultDescription,
+    image,
+    twitterImage,
+    siteUrl,
+    author,
+  } = data.site.siteMetadata;
 
   return (
     <Helmet
@@ -113,9 +102,11 @@ const AppHelmet = ({
         image,
         title || defaultTitle,
         robotMetaContent || 'index, follow',
-        author || 'Alysia Lynn',
+        siteUrl,
+        twitterImage,
+        author,
       )}
-      title={title || 'Alysia Lynn'}
+      title={title || defaultTitle}
     >
       {/* Google AdSense */}
       <Script
@@ -125,13 +116,13 @@ const AppHelmet = ({
       />
       {/* Google Tag Manager */}
       <Script async src="https://www.googletagmanager.com/gtag/js?id=G-4EFRB93JTC" />
+      <Script defer>{googleTagManager()}</Script>
       {schemaMarkup && <Script type="application/ld+json">{JSON.stringify(schemaMarkup)}</Script>}
     </Helmet>
   );
 };
 
 AppHelmet.defaultProps = {
-  author: undefined,
   description: undefined,
   robotMetaContent: undefined,
   schemaMarkup: undefined,

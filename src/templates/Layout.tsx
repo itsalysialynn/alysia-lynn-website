@@ -38,22 +38,13 @@ type LayoutProps = {
   robotMetaContent?: string | undefined | null;
   title?: string | undefined | null;
   schemaMarkup?: object;
-  author?: string | undefined | null;
 };
 
-const Layout = ({
-  children,
-  description,
-  robotMetaContent,
-  title,
-  schemaMarkup,
-  author,
-}: LayoutProps) => {
+const Layout = ({ children, description, robotMetaContent, title, schemaMarkup }: LayoutProps) => {
   const { isDarkTheme } = useTheme();
   return (
     <>
       <AppHelmet
-        author={author}
         description={description}
         robotMetaContent={robotMetaContent}
         schemaMarkup={schemaMarkup}
@@ -75,7 +66,6 @@ const Layout = ({
 };
 
 Layout.defaultProps = {
-  author: undefined,
   description: undefined,
   robotMetaContent: undefined,
   schemaMarkup: {},

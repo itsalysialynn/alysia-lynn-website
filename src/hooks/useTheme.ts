@@ -23,12 +23,11 @@ const useTheme = () => {
         .matchMedia('(prefers-color-scheme: dark)')
         .addEventListener('change', handleColorSchemeChange);
 
-    return () => {
+    return () =>
       window.matchMedia &&
-        window
-          .matchMedia('(prefers-color-scheme: dark)')
-          .removeEventListener('change', handleColorSchemeChange);
-    };
+      window
+        .matchMedia('(prefers-color-scheme: dark)')
+        .removeEventListener('change', handleColorSchemeChange);
   }, [handleColorSchemeChange]);
 
   return {

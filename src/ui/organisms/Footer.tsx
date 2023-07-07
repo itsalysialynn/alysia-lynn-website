@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-// @ts-ignore
-import trashFire from '../../gifs/trash.gif';
 
+import trashFire from '../../gifs/trash.gif';
 import mediaQueries from '../atoms/mediaQueries';
+import ExternalLink from '../molecules/ExternalLink';
 
 const LogoLayout = styled.div`
   display: flex;
@@ -36,8 +36,8 @@ const Footer = () => (
     <LogoLayout>
       <LogoImage alt="Trash on fire" height={24} src={trashFire} width={24} />
       <p>
-        Built on
-        <a href="https://www.morganti.dev/"> Mikefrastructure</a>
+        Built on&nbsp;
+        <ExternalLink href="https://www.morganti.dev/" text="Mikefrastructure" />
       </p>
     </LogoLayout>
   </FooterLayout>

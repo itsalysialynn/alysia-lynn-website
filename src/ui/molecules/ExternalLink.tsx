@@ -4,6 +4,10 @@ import styled from 'styled-components';
 
 import ArrowUpRight from '../atoms/icons/ArrowUpRight ';
 
+const ExternalOutboundLinkLayout = styled(OutboundLink)`
+  display: inline-block;
+`;
+
 const ExternalOutboundLink = styled(OutboundLink)`
   display: flex;
   align-items: center;
@@ -22,16 +26,18 @@ const ExternalLink = ({ text, href }: ExternalLinkProps) => {
   const [isHovering, setIsHovering] = useState<boolean>(false);
 
   return (
-    <ExternalOutboundLink
-      aria-label={text}
-      href={href}
-      onMouseEnter={() => setIsHovering(true)}
-      onMouseLeave={() => setIsHovering(false)}
-      rel="noreferrer"
-      target="_blank"
-    >
-      {text} {isHovering && <ExternalLinkIcon />}
-    </ExternalOutboundLink>
+    <ExternalOutboundLinkLayout>
+      <ExternalOutboundLink
+        aria-label={text}
+        href={href}
+        onMouseEnter={() => setIsHovering(true)}
+        onMouseLeave={() => setIsHovering(false)}
+        rel="noreferrer"
+        target="_blank"
+      >
+        {text} {isHovering && <ExternalLinkIcon />}
+      </ExternalOutboundLink>
+    </ExternalOutboundLinkLayout>
   );
 };
 
