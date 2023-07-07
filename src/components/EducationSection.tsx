@@ -5,9 +5,9 @@ import widont from 'widont';
 
 import educationHistory from '../data/educationHistory';
 import formatYearRange from '../helpers/formatYearRange';
-import Card from '../ui/Card';
-import ExternalLink from '../ui/ExternalLink';
-import Section from '../ui/Section';
+import Card from '../ui/atoms/Card';
+import Section from '../ui/atoms/Section';
+import ExternalLink from '../ui/molecules/ExternalLink';
 
 const EducationSectionLayout = styled.div`
   display: grid;

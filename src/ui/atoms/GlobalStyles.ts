@@ -1,7 +1,8 @@
 import { createGlobalStyle } from 'styled-components';
 
-import { mediaQueries } from './constants/mediaQueries';
-import Theme from './themes/Theme';
+import Theme from '../themes/Theme';
+
+import { mediaQueries } from './mediaQueries';
 
 type GlobalStyleProps = {
   theme: Theme;

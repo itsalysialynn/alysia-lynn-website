@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { mediaQueries } from './constants/mediaQueries';
-import Theme from './themes/Theme';
+import { mediaQueries } from '../atoms/mediaQueries';
 
 const LogoLayout = styled.div`
   display: flex;
@@ -34,19 +33,14 @@ const FooterLayout = styled.footer`
     padding: 32px 128px;
   }
 `;
-
-type SubtleLinkProps = {
-  theme: Theme;
-};
-
 const Footer = () => (
   <FooterLayout>
     <p>Made with 💜 by Alysia Lynn</p>
     <p>Copyright © {new Date().getFullYear()}. All rights reserved.</p>
     <LogoLayout>
       <LogoImage
-        height={24}
         alt="Trash on fire"
+        height={24}
         src="https://www.morganti.dev/images/favicon.gif"
       />
       <p>

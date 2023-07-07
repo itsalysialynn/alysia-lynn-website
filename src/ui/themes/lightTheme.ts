@@ -1,4 +1,4 @@
-import colors from '../constants/colors';
+import colors from '../atoms/colors';
 
 import Theme from './Theme';
 

@@ -4,9 +4,9 @@ import TextLoop from 'react-text-loop';
 import styled from 'styled-components';
 
 import factsAboutMe from '../data/factsAboutMe';
-import colors from '../ui/constants/colors';
-import { mediaQueries } from '../ui/constants/mediaQueries';
-import Section from '../ui/Section';
+import colors from '../ui/atoms/colors';
+import { mediaQueries } from '../ui/atoms/mediaQueries';
+import Section from '../ui/atoms/Section';
 
 import StatsCards from './StatsCards';
 

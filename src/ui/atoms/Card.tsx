@@ -1,10 +1,10 @@
 import React, { ReactNode, useCallback, useEffect } from 'react';
 import styled from 'styled-components';
 
-import { NAV_HEIGHT } from './Navbar';
+import { NAV_HEIGHT } from '../molecules/Navbar';
+import Theme from '../themes/Theme';
 
-import { mediaQueries } from './constants/mediaQueries';
-import Theme from './themes/Theme';
+import { mediaQueries } from './mediaQueries';
 
 type CardLayoutProps = {
   theme: Theme;

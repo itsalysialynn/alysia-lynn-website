@@ -4,7 +4,7 @@ import { PageProps } from 'gatsby';
 import AboutMeSection from '../components/AboutMeSection';
 import EducationSection from '../components/EducationSection';
 import EmploymentSection from '../components/EmploymentSection';
-import Layout from '../ui/Layout';
+import Layout from '../templates/Layout';
 
 const Home: React.FC<PageProps> = () => (
   <Layout

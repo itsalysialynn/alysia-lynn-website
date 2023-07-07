@@ -3,12 +3,11 @@ import { GatsbySeo } from 'gatsby-plugin-next-seo';
 import styled, { ThemeProvider } from 'styled-components';
 
 import useTheme from '../hooks/useTheme';
-import GlobalStyles from './GlobalStyles';
-import darkTheme from './themes/darkTheme';
-import lightTheme from './themes/lightTheme';
-
-import Footer from './Footer';
-import Navbar, { NAV_HEIGHT } from './Navbar';
+import GlobalStyles from '../ui/atoms/GlobalStyles';
+import Footer from '../ui/molecules/Footer';
+import Navbar, { NAV_HEIGHT } from '../ui/molecules/Navbar';
+import darkTheme from '../ui/themes/darkTheme';
+import lightTheme from '../ui/themes/lightTheme';
 
 const PageWrapper = styled.div`
   padding-top: ${NAV_HEIGHT}px;

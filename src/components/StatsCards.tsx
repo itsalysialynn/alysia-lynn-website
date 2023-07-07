@@ -3,8 +3,8 @@ import CountUp from 'react-countup';
 import { MotionAnimate } from 'react-motion-animate';
 import styled from 'styled-components';
 
-import colors from '../ui/constants/colors';
-import { mediaQueries } from '../ui/constants/mediaQueries';
+import colors from '../ui/atoms/colors';
+import { mediaQueries } from '../ui/atoms/mediaQueries';
 import Theme from '../ui/themes/Theme';
 
 const CounterNumber = styled.h2`
