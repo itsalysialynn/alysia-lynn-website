@@ -34,11 +34,11 @@ const Footer = () => (
     <p>Made with 💜 by Alysia Lynn</p>
     <p>Copyright © {new Date().getFullYear()}. All rights reserved.</p>
     <LogoLayout>
-      <LogoImage alt="Trash on fire" height={24} src={trashFire} width={24} />
-      <p>
+      <LogoImage alt="Trash on fire" height={24} src={trashFire} />
+      <span>
         Built on&nbsp;
         <ExternalLink href="https://www.morganti.dev/" text="Mikefrastructure" />
-      </p>
+      </span>
     </LogoLayout>
   </FooterLayout>
 );

@@ -29,12 +29,12 @@ const GlobalStyle = createGlobalStyle`
       margin: 0;
 
       ${mediaQueries.mobile`
-        font-size: 2.5rem;
+        font-size: 2.75rem;
         font-weight: 800;
       `}
 
       ${mediaQueries.tablet`
-        font-size: 3rem;
+        font-size: 4rem;
         font-weight: 800;
       `}
     }
@@ -49,7 +49,7 @@ const GlobalStyle = createGlobalStyle`
       `}
 
       ${mediaQueries.tablet`
-        font-size: 2rem;
+        font-size: 2.5rem;
       `}
     }
 

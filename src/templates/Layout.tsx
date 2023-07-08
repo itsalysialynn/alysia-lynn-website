@@ -20,11 +20,11 @@ const PageLayout = styled.div`
   `}
 
   ${mediaQueries.laptop`
-    padding: 0 128px;
+    padding: 0 96px;
   `}
 
   ${mediaQueries.desktop`
-    padding: 0 160px;
+    padding: 0 144px;
   `}
 `;
 

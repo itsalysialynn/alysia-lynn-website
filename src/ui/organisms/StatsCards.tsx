@@ -8,8 +8,9 @@ import mediaQueries from '../atoms/mediaQueries';
 import Theme from '../themes/Theme';
 
 const CounterNumber = styled.h2`
-  color: ${colors.sunrise};
+  color: ${colors.king};
   font-size: 5rem;
+  font-weight: 800;
 
   ${mediaQueries.tablet`
     font-size: 4rem;
