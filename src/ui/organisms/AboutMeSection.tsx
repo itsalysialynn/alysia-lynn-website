@@ -14,6 +14,7 @@ const AboutMeSectionDesktopLayout = styled(Section)`
   min-height: 100vh;
   ${mediaQueries.tablet`
     padding: 15vh 0;
+    text-align: center;
   `}
   ${mediaQueries.laptop`
     padding: 15vh 0;
@@ -33,12 +34,12 @@ const IntroText = styled.h1`
   white-space: break-spaces;
   background-image: linear-gradient(
     100deg,
-    #dc90ff,
-    #ad77ff 9%,
-    #6851ff 40%,
-    #6851ff 46%,
-    #6851ff 55%,
-    #7cbfff 82%,
+    ${colors.sunrise},
+    ${colors.lavender} 9%,
+    ${colors.king} 40%,
+    ${colors.king} 46%,
+    ${colors.king} 55%,
+    ${colors.whale} 82%,
     ${colors.grape}
   );
 `;

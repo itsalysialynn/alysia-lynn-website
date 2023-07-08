@@ -41,13 +41,13 @@ const NavbarLayout = styled.nav`
   `}
 
   ${mediaQueries.laptop`
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 5fr 2fr;
     padding: 0 128px;
   `}
 
   ${mediaQueries.desktop`
     grid-template-columns: 2fr 1fr;
-    padding: 0 160px;
+    padding: 0 144px;
   `}
   
   } a {
@@ -77,6 +77,10 @@ const NavigationIcons = styled.div`
   `}
 
   ${mediaQueries.tablet`
+    grid-gap: 16px;
+  `}
+
+  ${mediaQueries.laptop`
     grid-gap: 16px;
   `}
 
