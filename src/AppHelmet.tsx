@@ -33,6 +33,9 @@ const meta = (
   { content: title, name: 'twitter:title' },
   { content: title, property: 'og:title' },
   { content: author, property: 'article:author' },
+
+  { content: 'website', property: 'og:type' },
+  { content: siteUrl, property: 'or:url' },
 ];
 
 const link = [
