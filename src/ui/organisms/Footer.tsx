@@ -35,7 +35,7 @@ const Footer = () => (
     <p>Copyright © {new Date().getFullYear()}. All rights reserved.</p>
     <LogoLayout>
       <LogoImage alt="Trash on fire" height={24} src={trashFire} />
-      <p>Built on </p>
+      <p>Built on&nbsp;</p>
       <ExternalLink href="https://www.morganti.dev/" text="Mikefrastructure" />
     </LogoLayout>
   </FooterLayout>
