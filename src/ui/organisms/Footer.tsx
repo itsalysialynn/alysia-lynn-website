@@ -35,10 +35,8 @@ const Footer = () => (
     <p>Copyright © {new Date().getFullYear()}. All rights reserved.</p>
     <LogoLayout>
       <LogoImage alt="Trash on fire" height={24} src={trashFire} />
-      <p>
-        Built on&nbsp;
-        <ExternalLink href="https://www.morganti.dev/" text="Mikefrastructure" />
-      </p>
+      <p>Built on </p>
+      <ExternalLink href="https://www.morganti.dev/" text="Mikefrastructure" />
     </LogoLayout>
   </FooterLayout>
 );

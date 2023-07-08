@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 import ArrowUpRight from '../atoms/icons/ArrowUpRight ';
 
-const ExternalOutboundLinkLayout = styled(OutboundLink)`
+const ExternalOutboundLinkLayout = styled.div`
   display: inline-block;
 `;
 
