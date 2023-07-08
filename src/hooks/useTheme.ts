@@ -6,7 +6,7 @@ const useTheme = () => {
   const [theme, setTheme] = useState<ThemeType>(ThemeType.LIGHT);
 
   const handleColorSchemeChange = useCallback(
-    (event: { matches: any }) =>
+    (event: MediaQueryListEvent) =>
       event.matches ? setTheme(ThemeType.DARK) : setTheme(ThemeType.LIGHT),
     [],
   );
