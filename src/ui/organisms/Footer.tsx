@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import trashFire from '../../gifs/trash.gif';
+import TrashFireLazy from '../atoms/gifs/trash-fire/TrashFireLazy';
 import mediaQueries from '../atoms/mediaQueries';
 import ExternalLink from '../molecules/ExternalLink';
 
@@ -11,7 +11,7 @@ const LogoLayout = styled.div`
   align-items: center;
 `;
 
-const LogoImage = styled.img`
+const LogoImage = styled(TrashFireLazy)`
   padding-right: 4px;
 `;
 
@@ -34,7 +34,7 @@ const Footer = () => (
     <p>Made with 💜 by Alysia Lynn</p>
     <p>Copyright © {new Date().getFullYear()}. All rights reserved.</p>
     <LogoLayout>
-      <LogoImage alt="Trash on fire" height={24} src={trashFire} />
+      <LogoImage />
       <span>
         Built on&nbsp;
         <ExternalLink href="https://www.morganti.dev/" text="Mikefrastructure" />
