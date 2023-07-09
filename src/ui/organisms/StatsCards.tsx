@@ -50,11 +50,17 @@ const StatsLayout = styled.div`
 
   ${mediaQueries.mobile`
     grid-template-columns: 1fr;
-  `} ${mediaQueries.tablet`
-    grid-template-columns: 1fr;
-  `} ${mediaQueries.laptop`
+  `}
+
+  ${mediaQueries.tablet`
     grid-template-columns: 1fr 1fr;
-  `} ${mediaQueries.desktop`
+  `} 
+  
+  ${mediaQueries.laptop`
+    grid-template-columns: 1fr 1fr;
+  `} 
+  
+  ${mediaQueries.desktop`
     grid-template-columns: 1fr 1fr 1fr 1fr;
   `};
 `;

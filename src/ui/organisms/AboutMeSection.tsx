@@ -12,13 +12,17 @@ import StatsCards from './StatsCards';
 
 const AboutMeSectionDesktopLayout = styled(Section)`
   min-height: 100vh;
+  ${mediaQueries.mobile`
+    text-align: center;
+  `}
   ${mediaQueries.tablet`
     padding: 15vh 0;
     text-align: center;
   `}
   ${mediaQueries.laptop`
     padding: 15vh 0;
-  `} ${mediaQueries.desktop`
+  `} 
+  ${mediaQueries.desktop`
     padding: 25vh 0;
   `};
 `;
