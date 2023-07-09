@@ -51,7 +51,7 @@ const StatsLayout = styled.div`
   ${mediaQueries.mobile`
     grid-template-columns: 1fr;
   `} ${mediaQueries.tablet`
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   `} ${mediaQueries.laptop`
     grid-template-columns: 1fr 1fr;
   `} ${mediaQueries.desktop`
