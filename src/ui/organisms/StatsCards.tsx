@@ -53,7 +53,7 @@ const StatsLayout = styled.div`
   `}
 
   ${mediaQueries.tablet`
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
   `} 
   
   ${mediaQueries.laptop`

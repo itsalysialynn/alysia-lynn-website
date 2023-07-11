@@ -1,6 +1,7 @@
 import React, { ReactNode } from 'react';
 import styled, { ThemeProvider } from 'styled-components';
 
+import AppHelmet from '../AppHelmet';
 import useTheme from '../hooks/useTheme';
 import GlobalStyle from '../ui/atoms/GlobalStyle';
 import mediaQueries from '../ui/atoms/mediaQueries';
@@ -33,23 +34,42 @@ const PageWrapper = styled.div`
 
 type LayoutProps = {
   children: ReactNode;
+  description?: string | undefined | null;
+  robotMetaContent?: string | undefined | null;
+  title?: string | undefined | null;
+  schemaMarkup?: object;
 };
 
-const Layout = ({ children }: LayoutProps) => {
+const Layout = ({ children, description, robotMetaContent, title, schemaMarkup }: LayoutProps) => {
   const { isDarkTheme } = useTheme();
-  const theme = isDarkTheme ? darkTheme : lightTheme;
   return (
-    <PageWrapper>
-      <ThemeProvider theme={theme}>
-        <GlobalStyle theme={theme} />
-        <PageLayout>
-          <Navbar />
-          <main role="main">{children}</main>
-          <Footer />
-        </PageLayout>
-      </ThemeProvider>
-    </PageWrapper>
+    <>
+      <AppHelmet
+        description={description}
+        robotMetaContent={robotMetaContent}
+        schemaMarkup={schemaMarkup}
+        title={title}
+      />
+
+      <PageWrapper>
+        <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
+          <GlobalStyle />
+          <PageLayout>
+            <Navbar />
+            <main role="main">{children}</main>
+            <Footer />
+          </PageLayout>
+        </ThemeProvider>
+      </PageWrapper>
+    </>
   );
+};
+
+Layout.defaultProps = {
+  description: undefined,
+  robotMetaContent: undefined,
+  schemaMarkup: {},
+  title: undefined,
 };
 
 export default Layout;
