@@ -19,7 +19,6 @@ const config: GatsbyConfig = {
       resolve: 'gatsby-plugin-manifest',
     },
     'gatsby-plugin-mdx',
-    'gatsby-plugin-react-helmet',
     {
       options: {
         defaults: {
@@ -68,13 +67,7 @@ const config: GatsbyConfig = {
     },
   ],
   siteMetadata: {
-    author: 'Alysia Lynn',
-    description:
-      "Hi, I'm Alysia, and I am a web and mobile developer based out of Squamish, BC, Canada.",
-    image: 'meta-image.png',
     siteUrl: 'https://www.alysia-lynn.com',
-    title: 'Alysia Lynn',
-    twitterImage: 'twitter-image.png',
   },
 };
 
