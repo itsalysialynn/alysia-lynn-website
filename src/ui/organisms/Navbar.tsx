@@ -16,8 +16,8 @@ type NavbarLayoutProps = {
   theme: Theme;
 };
 
-const NavbarLayout = styled.nav<NavbarLayoutProps>`
-  background-color: ${({ theme, isTopOfPage }) =>
+const NavbarLayout = styled.nav`
+  background-color: ${({ theme, isTopOfPage }: NavbarLayoutProps) =>
     isTopOfPage ? theme.backgroundColor : theme.nav.backgroundColor};
   left: 0;
   position: fixed;
@@ -49,6 +49,13 @@ const NavbarLayout = styled.nav<NavbarLayoutProps>`
     grid-template-columns: 2fr 1fr;
     padding: 0 144px;
   `}
+  
+  } a {
+    color: ${({ theme }: NavbarLayoutProps) => theme.nav.hyperlink.color};
+
+    &:hover {
+      color: ${({ theme }: NavbarLayoutProps) => theme.nav.hyperlink.hover};
+    }
   }
 `;
 

@@ -73,8 +73,12 @@ const GlobalStyle = createGlobalStyle`
       color: ${({ theme }: GlobalStyleProps) => theme.hyperlink.color};
       text-decoration: none;
 
-      &.hover, &.active  {
-        opacity: .75;
+      &.active {
+        color: ${({ theme }: GlobalStyleProps) => theme.hyperlink.active};
+      }
+
+      &.hover {
+        color: ${({ theme }: GlobalStyleProps) => theme.hyperlink.hover};
       }
     }
 
