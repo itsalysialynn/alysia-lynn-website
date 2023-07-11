@@ -66,6 +66,9 @@ const config: GatsbyConfig = {
       resolve: 'gatsby-plugin-webpack-bundle-analyser-v2',
     },
   ],
+  siteMetadata: {
+    siteUrl: 'https://www.alysia-lynn.com',
+  },
 };
 
 export default config;
