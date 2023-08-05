@@ -1,6 +1,8 @@
 import { useCallback, useEffect, useState } from 'react';
 
 import ThemeType from '../ui/themes/ThemeType';
+import darkTheme from '../ui/themes/darkTheme';
+import lightTheme from '../ui/themes/lightTheme';
 
 const useTheme = () => {
   const [theme, setTheme] = useState<ThemeType>(ThemeType.LIGHT);
@@ -30,9 +32,11 @@ const useTheme = () => {
         .removeEventListener('change', handleColorSchemeChange);
   }, [handleColorSchemeChange]);
 
+  const isDarkTheme = theme === ThemeType.DARK;
+
   return {
-    isDarkTheme: theme === ThemeType.DARK,
-    theme,
+    isDarkTheme,
+    theme: isDarkTheme ? darkTheme : lightTheme,
   };
 };
 

@@ -41,7 +41,7 @@ type LayoutProps = {
 };
 
 const Layout = ({ children, description, robotMetaContent, title, schemaMarkup }: LayoutProps) => {
-  const { isDarkTheme } = useTheme();
+  const { isDarkTheme, theme } = useTheme();
   return (
     <>
       <AppHelmet
@@ -53,7 +53,7 @@ const Layout = ({ children, description, robotMetaContent, title, schemaMarkup }
 
       <PageWrapper>
         <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
-          <GlobalStyle />
+          <GlobalStyle theme={theme} />
           <PageLayout>
             <Navbar />
             <main role="main">{children}</main>

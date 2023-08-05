@@ -16,8 +16,8 @@ type NavbarLayoutProps = {
   theme: Theme;
 };
 
-const NavbarLayout = styled.nav`
-  background-color: ${({ theme, isTopOfPage }: NavbarLayoutProps) =>
+const NavbarLayout = styled.nav<NavbarLayoutProps>`
+  background-color: ${({ theme, isTopOfPage }) =>
     isTopOfPage ? theme.backgroundColor : theme.nav.backgroundColor};
   left: 0;
   position: fixed;
@@ -50,12 +50,6 @@ const NavbarLayout = styled.nav`
     padding: 0 144px;
   `}
   
-  } a {
-    color: ${({ theme }: NavbarLayoutProps) => theme.nav.hyperlink.color};
-
-    &:hover {
-      color: ${({ theme }: NavbarLayoutProps) => theme.nav.hyperlink.hover};
-    }
   }
 `;
 
@@ -116,6 +110,7 @@ const Navbar = () => {
         <AnchorLink title="Education" to="/#education">
           Education
         </AnchorLink>
+        <OutboundLink href="https://medium.com/@itsalysialynn">Blog</OutboundLink>
       </NavigationItems>
       <NavigationIcons>
         <NavIconOutboundLink

@@ -8,7 +8,7 @@ type GlobalStyleProps = {
   theme: Theme;
 };
 
-const GlobalStyle = createGlobalStyle`
+const GlobalStyle = createGlobalStyle<GlobalStyleProps>`
   * {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     background-repeat: no-repeat;
@@ -17,8 +17,8 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background-color: ${({ theme }: GlobalStyleProps) => theme.backgroundColor};
-    color: ${({ theme }: GlobalStyleProps) => theme.color};
+    background-color: ${({ theme }) => theme.backgroundColor};
+    color: ${({ theme }) => theme.color};
     font-size: 1rem;
     margin: 0;
 
@@ -70,15 +70,11 @@ const GlobalStyle = createGlobalStyle`
     }
 
     a {
-      color: ${({ theme }: GlobalStyleProps) => theme.hyperlink.color};
+      color: ${({ theme }) => theme.hyperlink.color};
       text-decoration: none;
 
-      &.active {
-        color: ${({ theme }: GlobalStyleProps) => theme.hyperlink.active};
-      }
-
-      &.hover {
-        color: ${({ theme }: GlobalStyleProps) => theme.hyperlink.hover};
+      &:active, &:hover {
+        opacity: .75;
       }
     }
 

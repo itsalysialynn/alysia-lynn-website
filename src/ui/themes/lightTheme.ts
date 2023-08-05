@@ -9,16 +9,10 @@ const lightTheme: Theme = {
   },
   color: colors.galaxy,
   hyperlink: {
-    active: colors.leaf,
     color: colors.grape,
-    hover: colors.grape,
   },
   nav: {
     backgroundColor: colors.white,
-    hyperlink: {
-      color: colors.shadow,
-      hover: colors.grape,
-    },
   },
   section: {
     borderColor: colors.iron,
