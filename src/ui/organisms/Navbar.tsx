@@ -101,9 +101,6 @@ const Navbar = () => {
   return (
     <NavbarLayout isTopOfPage={isTopOfPage}>
       <NavigationItems>
-        <AnchorLink title="About" to="/#about">
-          About
-        </AnchorLink>
         <AnchorLink title="Employment" to="/#employment">
           Employment
         </AnchorLink>

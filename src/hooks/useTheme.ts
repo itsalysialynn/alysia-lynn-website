@@ -1,8 +1,8 @@
 import { useCallback, useEffect, useState } from 'react';
 
-import ThemeType from '../ui/themes/ThemeType';
 import darkTheme from '../ui/themes/darkTheme';
 import lightTheme from '../ui/themes/lightTheme';
+import ThemeType from '../ui/themes/ThemeType';
 
 const useTheme = () => {
   const [theme, setTheme] = useState<ThemeType>(ThemeType.LIGHT);
