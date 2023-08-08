@@ -4865,7 +4865,7 @@ __metadata:
     react-helmet-async: ^1.3.0
     react-is: ^18.2.0
     react-testing-library: ^8.0.1
-    styled-components: ^6.0.3
+    styled-components: ^6.0.7
     ts-jest: ^29.0.5
     typescript: ^5.0.2
     widont: ^0.3.4
@@ -17615,9 +17615,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"styled-components@npm:^6.0.3":
-  version: 6.0.3
-  resolution: "styled-components@npm:6.0.3"
+"styled-components@npm:^6.0.7":
+  version: 6.0.7
+  resolution: "styled-components@npm:6.0.7"
   dependencies:
     "@babel/cli": ^7.21.0
     "@babel/core": ^7.21.0
@@ -17645,7 +17645,7 @@ __metadata:
   peerDependenciesMeta:
     babel-plugin-styled-components:
       optional: true
-  checksum: e02e6a38a7d484ed8ce1fa1f36b7934c1c1f57195d9c173853adc8cb89a209c23c79cf9f979ffff22829de5e817fb95aab04038c1270110956dfef168c480b13
+  checksum: 38645f38f145225e456f8f9303f5be1d988180e0e3d84d1f3e1d14fb006c7deb69704745e266d61016616a154938697d011a0bff6eaeb7dd25dbba659e2411f7
   languageName: node
   linkType: hard
 
