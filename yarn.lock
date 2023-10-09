@@ -4027,10 +4027,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^20.4.8":
-  version: 20.4.8
-  resolution: "@types/node@npm:20.4.8"
-  checksum: 86a3963c0c7af3410553d1dfa4b018a20b3cb3ab4d8e8ffe27408b6338c5de0374b0bf379bc705da2205b466daa751ccfe062f453ba9bde34fdb0e5163ca6a68
+"@types/node@npm:^20.8.3":
+  version: 20.8.3
+  resolution: "@types/node@npm:20.8.3"
+  checksum: bfb88b341faeb19f8fd37306a3bf433721b876c6491d10fcb0b13fd26601fa36ee45113dd82b1e1c23e3c957dff5b99f81a16493cefa03abe797e41a2487a4f7
   languageName: node
   linkType: hard
 
@@ -4846,7 +4846,7 @@ __metadata:
     "@babel/preset-typescript": ^7.21.0
     "@testing-library/react": ^14.0.0
     "@types/jest": ^29.5.0
-    "@types/node": ^20.4.8
+    "@types/node": ^20.8.3
     "@types/react": ^18.0.35
     "@types/react-countup": ^4.3.1
     "@types/react-dom": ^18.2.4
