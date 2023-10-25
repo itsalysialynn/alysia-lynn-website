@@ -5447,7 +5447,7 @@ __metadata:
     eslint-plugin-styled-components-a11y: ^2.0.1
     gatsby: ^5.10.0
     gatsby-plugin-anchor-links: ^1.2.1
-    gatsby-plugin-catch-links: ^5.11.0
+    gatsby-plugin-catch-links: ^5.12.0
     gatsby-plugin-google-analytics: ^5.11.0
     gatsby-plugin-image: ^3.9.0
     gatsby-plugin-manifest: ^5.8.0
@@ -10181,15 +10181,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-catch-links@npm:^5.11.0":
-  version: 5.11.0
-  resolution: "gatsby-plugin-catch-links@npm:5.11.0"
+"gatsby-plugin-catch-links@npm:^5.12.0":
+  version: 5.12.0
+  resolution: "gatsby-plugin-catch-links@npm:5.12.0"
   dependencies:
     "@babel/runtime": ^7.20.13
     escape-string-regexp: ^1.0.5
   peerDependencies:
     gatsby: ^5.0.0-next
-  checksum: 69abe340e268ffb0761d0bf410f5fb4f6fc83c23beb5e8b7738b33604d952b8b4c2468464eb8c999e51d297575e93405ac6ff0270b06d375bfc03bf05b28a81b
+  checksum: ff71fecea35ca3a8d015cac527cca2abd089e1a2254242658cecbdd92894b781aad3e4a355a6826ce61bb5ce3edbeafe663878ea37d42b5eedd126f2a572a0d3
   languageName: node
   linkType: hard
 
