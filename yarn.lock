@@ -5448,7 +5448,7 @@ __metadata:
     gatsby: ^5.10.0
     gatsby-plugin-anchor-links: ^1.2.1
     gatsby-plugin-catch-links: ^5.11.0
-    gatsby-plugin-google-analytics: ^5.11.0
+    gatsby-plugin-google-analytics: ^5.13.0
     gatsby-plugin-image: ^3.9.0
     gatsby-plugin-manifest: ^5.8.0
     gatsby-plugin-mdx: ^5.8.0
@@ -10193,9 +10193,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-google-analytics@npm:^5.11.0":
-  version: 5.11.0
-  resolution: "gatsby-plugin-google-analytics@npm:5.11.0"
+"gatsby-plugin-google-analytics@npm:^5.13.0":
+  version: 5.13.0
+  resolution: "gatsby-plugin-google-analytics@npm:5.13.0"
   dependencies:
     "@babel/runtime": ^7.20.13
     minimatch: ^3.1.2
@@ -10204,7 +10204,7 @@ __metadata:
     gatsby: ^5.0.0-next
     react: ^18.0.0 || ^0.0.0
     react-dom: ^18.0.0 || ^0.0.0
-  checksum: 147049b875c6f8e55982ff21d676b60b971ce01a029957d8cee08fc0050bfc0dd6054d33ea536806f2a3246bf84b5170e39b3342f0512aedbe39b291d9370ec9
+  checksum: 4d264a4484c4b9e8b0246705f6c71ec349b2035b8c9e6bcbc89d5ae78d13b3733846b0300b2ea1bc0f549d253309574fcecb4f57caf014cd764da8ca2f3cf32b
   languageName: node
   linkType: hard
 
