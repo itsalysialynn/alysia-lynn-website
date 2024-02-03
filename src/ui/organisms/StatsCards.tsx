@@ -61,7 +61,7 @@ const StatsLayout = styled.div`
   `} 
   
   ${mediaQueries.desktop`
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   `};
 `;
 
@@ -76,15 +76,9 @@ const StatsCards = () => (
       </Card>
       <Card>
         <CounterNumber>
-          <CountUp delay={1.4} end={10} start={0} />
+          <CountUp delay={1.4} end={12} start={0} />
         </CounterNumber>
         Udemy Courses Complete
-      </Card>
-      <Card>
-        <CounterNumber>
-          <CountUp delay={1.6} end={4} start={0} />
-        </CounterNumber>
-        Dev Books Read in 2023
       </Card>
       <Card>
         <CounterNumber>
