@@ -5466,7 +5466,7 @@ __metadata:
     jest-junit: ^16.0.0
     prettier: ^3.0.1
     react: ^18.2.0
-    react-countup: ^6.4.2
+    react-countup: ^6.5.2
     react-dom: ^18.2.0
     react-helmet: ^6.1.0
     react-helmet-async: ^1.3.0
@@ -7479,6 +7479,13 @@ __metadata:
   version: 2.7.0
   resolution: "countup.js@npm:2.7.0"
   checksum: 52990ddbcf5e23e51fa7ce0d33bcfebaf1345df8459aff239fb840b6e3ecc1b171df2f4e8edc3d30e727e6043c4c5e231e2dea465b9ca3e96fef241586c93e4f
+  languageName: node
+  linkType: hard
+
+"countup.js@npm:^2.8.0":
+  version: 2.8.0
+  resolution: "countup.js@npm:2.8.0"
+  checksum: bfded0c6051b79be5f07c097f97bc39f29e95b92b01077fc214ee118b0afbc53988b3a491e2319ea7a1896014a9cda52f150722ccce9afd677faea5ade1274dd
   languageName: node
   linkType: hard
 
@@ -17038,7 +17045,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-countup@npm:*, react-countup@npm:^6.4.2":
+"react-countup@npm:*":
   version: 6.4.2
   resolution: "react-countup@npm:6.4.2"
   dependencies:
@@ -17047,6 +17054,17 @@ __metadata:
   peerDependencies:
     react: ">= 16.3.0"
   checksum: 2cdfa07a89f423933e88e11b207aa4017fde0f39646a7ae977ac6607df42c200aaa6b8231ce6c9e6d597a9d52332b68c78869c4fcf245411259a7dd1dcdbf7af
+  languageName: node
+  linkType: hard
+
+"react-countup@npm:^6.5.2":
+  version: 6.5.2
+  resolution: "react-countup@npm:6.5.2"
+  dependencies:
+    countup.js: ^2.8.0
+  peerDependencies:
+    react: ">= 16.3.0"
+  checksum: 9262318095578d669f7155be185c9a1f1c1fc94616c96e20e665b7d21946c278ecd1fcd24c5faf0bbc423e8045f8258be977414acfc3dd5cf1fbe13f4d4dab28
   languageName: node
   linkType: hard
 
