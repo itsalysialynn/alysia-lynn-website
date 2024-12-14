@@ -1,4 +1,4 @@
-import { useCallback, useEffect } from 'react';
+import React, { useCallback, useEffect } from 'react';
 import { keyframes, styled } from 'styled-components';
 
 const animation = keyframes`

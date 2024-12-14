@@ -1,5 +1,4 @@
-import { useCallback, useEffect, useState } from 'react';
-
+import React, { useCallback, useEffect, useState } from 'react';
 import darkTheme from '../ui/themes/darkTheme';
 import lightTheme from '../ui/themes/lightTheme';
 import ThemeType from '../ui/themes/ThemeType';

@@ -1,15 +1,16 @@
 import { graphql, useStaticQuery } from 'gatsby';
+import React from 'react';
 import { Helmet } from 'react-helmet';
 import colors from './ui/atoms/colors';
 import googleTagManager from './vendor/googleTagManager';
 
 type SiteMetadata = {
-  title: string;
-  description: string;
-  siteUrl: string;
-  twitterImage: string;
-  image: string;
   author: string;
+  description: string;
+  image: string;
+  siteUrl: string;
+  title: string;
+  twitterImage: string;
 };
 
 type SiteQueryResult = {
@@ -78,12 +79,12 @@ const link = [
 
 type AppHelmetProps = {
   description?: string | null;
-  title?: string | null;
   robotMetaContent?: string | null;
   schemaMarkup?: object;
+  title?: string | null;
 };
 
-const AppHelmet = ({ description, title, robotMetaContent, schemaMarkup }: AppHelmetProps) => {
+const AppHelmet = ({ description, robotMetaContent, schemaMarkup, title }: AppHelmetProps) => {
   const data = useStaticQuery<SiteQueryResult>(graphql`
     query {
       site {
@@ -100,12 +101,12 @@ const AppHelmet = ({ description, title, robotMetaContent, schemaMarkup }: AppHe
   `);
 
   const {
-    title: defaultTitle,
+    author,
     description: defaultDescription,
     image,
-    twitterImage,
     siteUrl,
-    author,
+    title: defaultTitle,
+    twitterImage,
   } = data.site.siteMetadata;
 
   return (

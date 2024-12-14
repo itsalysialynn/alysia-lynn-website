@@ -1,5 +1,4 @@
 import { css } from 'styled-components';
-
 import breakpoints from './breakpoints';
 
 const mediaQueries = {

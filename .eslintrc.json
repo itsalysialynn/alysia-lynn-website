@@ -1,12 +1,10 @@
 {
   "root": true,
   "parser": "@typescript-eslint/parser",
-  "parserOptions": {
-    "project": "./tsconfig.json"
-  },
-
-  "plugins": ["@typescript-eslint", "import", "prettier"],
+  "parserOptions": { "project": "./tsconfig.json" },
+  "plugins": ["@typescript-eslint", "import", "prettier", "sort"],
   "extends": [
+    "plugin:sort/recommended",
     "eslint:recommended",
     "plugin:@typescript-eslint/strict-type-checked",
     "plugin:@typescript-eslint/stylistic-type-checked",
@@ -19,45 +17,32 @@
     "plugin:react-hooks/recommended",
     "plugin:prettier/recommended"
   ],
-  "env": {
-    "browser": true,
-    "commonjs": true,
-    "es2022": true
-  },
+  "env": { "browser": true, "commonjs": true, "es2022": true },
   "settings": {
-    "react": {
-      "version": "detect"
-    },
+    "react": { "version": "detect" },
     "node": {
       "version": "detect",
       "tryExtensions": [".js", ".json", ".node", ".ts", ".tsx", ".d.ts"]
     },
-    "import/resolver": {
-      "typescript": {},
-      "node": {
-        "paths": ["."]
-      }
-    }
+    "import/resolver": { "typescript": {}, "node": { "paths": ["."] } }
   },
   "rules": {
-    "import/no-extraneous-dependencies": ["error", { "includeTypes": true }],
     "@typescript-eslint/consistent-type-definitions": "off",
-    "import/no-useless-path-segments": ["error"],
-    "import/no-unused-modules": ["error"],
-    "import/no-cycle": [
+    "@typescript-eslint/no-unused-vars": [
       "error",
-      {
-        "maxDepth": 1
-      }
+      { "varsIgnorePattern": "^React$", "argsIgnorePattern": "^_" }
     ],
+    "import/no-cycle": ["error", { "maxDepth": 1 }],
+    "import/no-extraneous-dependencies": ["error", { "includeTypes": true }],
+    "import/no-unused-modules": ["error"],
+    "import/no-useless-path-segments": ["error"],
     "prefer-template": "error",
     "react/jsx-curly-brace-presence": [
       "error",
-      {
-        "children": "never",
-        "props": "never",
-        "propElementValues": "always"
-      }
-    ]
+      { "children": "never", "props": "never", "propElementValues": "always" }
+    ],
+    "sort/string-enums": ["error", { "caseSensitive": false, "natural": true }],
+    "sort/string-unions": ["error", { "caseSensitive": false, "natural": true }],
+    "sort/type-properties": ["error", { "caseSensitive": false, "natural": true }]
   }
 }

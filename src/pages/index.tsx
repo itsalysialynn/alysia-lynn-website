@@ -1,3 +1,4 @@
+import React from 'react';
 import Layout from '../templates/Layout';
 import AboutMeSection from '../ui/organisms/AboutMeSection';
 import EducationSection from '../ui/organisms/EducationSection';

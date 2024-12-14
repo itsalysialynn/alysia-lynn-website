@@ -1,7 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-
 import Theme from '../themes/Theme';
-
 import mediaQueries from './mediaQueries';
 
 type GlobalStyleProps = {

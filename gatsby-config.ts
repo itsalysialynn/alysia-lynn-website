@@ -1,5 +1,4 @@
 import type { GatsbyConfig } from 'gatsby';
-
 import colors from './src/ui/atoms/colors';
 
 const config: GatsbyConfig = {
