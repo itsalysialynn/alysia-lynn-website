@@ -1,5 +1,4 @@
-import React from 'react';
-import styled from 'styled-components';
+import { styled } from 'styled-components';
 
 import employmentHistory from '../../data/employmentHistory';
 import formatYearRange from '../../helpers/formatYearRange';

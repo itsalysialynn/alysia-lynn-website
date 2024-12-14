@@ -1,5 +1,5 @@
-import React, { useCallback, useEffect } from 'react';
-import styled, { keyframes } from 'styled-components';
+import { useCallback, useEffect } from 'react';
+import { keyframes, styled } from 'styled-components';
 
 const animation = keyframes`
   0% { opacity: 0;  }
@@ -22,7 +22,7 @@ type TextLoopProps = {
 };
 
 const TextLoop = ({ textArray }: TextLoopProps) => {
-  const setText = (text) => {
+  const setText = (text: string) => {
     const element = document.getElementById('text');
     if (element) {
       element.innerHTML = text;

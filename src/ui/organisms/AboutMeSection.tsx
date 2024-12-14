@@ -1,5 +1,4 @@
-import React from 'react';
-import styled from 'styled-components';
+import { styled } from 'styled-components';
 
 import factsAboutMe from '../../data/factsAboutMe';
 import colors from '../atoms/colors';
@@ -55,7 +54,7 @@ const IntroTextLoop = styled.h2`
 const AboutMeSection = () => (
   <AboutMeSectionDesktopLayout id="about">
     <div>
-      <IntroText>Hi, I'm Alysia Lynn, </IntroText>
+      <IntroText>Hi, I`m Alysia Lynn, </IntroText>
       <IntroTextLoop>
         and I <TextLoop textArray={factsAboutMe} />
       </IntroTextLoop>

@@ -1,6 +1,5 @@
-import React, { ReactNode } from 'react';
-import styled, { ThemeProvider } from 'styled-components';
-
+import { ReactNode } from 'react';
+import { ThemeProvider, styled } from 'styled-components';
 import AppHelmet from '../AppHelmet';
 import useTheme from '../hooks/useTheme';
 import GlobalStyle from '../ui/atoms/GlobalStyle';
@@ -63,13 +62,6 @@ const Layout = ({ children, description, robotMetaContent, title, schemaMarkup }
       </PageWrapper>
     </>
   );
-};
-
-Layout.defaultProps = {
-  description: undefined,
-  robotMetaContent: undefined,
-  schemaMarkup: {},
-  title: undefined,
 };
 
 export default Layout;

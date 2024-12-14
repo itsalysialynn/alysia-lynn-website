@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import { OutboundLink } from 'gatsby-plugin-google-analytics';
-import styled from 'styled-components';
+import { useEffect, useState } from 'react';
+import { styled } from 'styled-components';
 
 import Envelope from '../atoms/icons/Envelope';
 import Github from '../atoms/icons/Github';
@@ -93,9 +93,13 @@ const Navbar = () => {
   const [isTopOfPage, setIsTopOfPage] = useState(true);
 
   useEffect(() => {
-    const onScroll = () => setIsTopOfPage(window.scrollY === 0);
+    const onScroll = () => {
+      setIsTopOfPage(window.scrollY === 0);
+    };
     window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+    };
   }, []);
 
   return (

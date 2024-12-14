@@ -1,5 +1,4 @@
-import React from 'react';
-import styled from 'styled-components';
+import { styled } from 'styled-components';
 
 import TrashFireLazy from '../atoms/gifs/trash-fire/TrashFireLazy';
 import mediaQueries from '../atoms/mediaQueries';
