@@ -1,4 +1,5 @@
 import { Link } from 'gatsby';
+import React from 'react';
 import { styled } from 'styled-components';
 import Layout from '../templates/Layout';
 import Section from '../ui/atoms/Section';
