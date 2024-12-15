@@ -1,5 +1,4 @@
 import colors from '../atoms/colors';
-
 import Theme from './Theme';
 
 const lightTheme: Theme = {

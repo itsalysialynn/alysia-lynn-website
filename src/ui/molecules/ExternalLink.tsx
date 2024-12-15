@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
 import { OutboundLink } from 'gatsby-plugin-google-analytics';
-import styled from 'styled-components';
-
+import React, { useState } from 'react';
+import { styled } from 'styled-components';
 import ArrowUpRight from '../atoms/icons/ArrowUpRight ';
 
 const ExternalOutboundLinkLayout = styled.div`
@@ -22,7 +21,7 @@ const ExternalLinkIcon = styled(ArrowUpRight)`
   display: inline-block;
 `;
 
-const ExternalLink = ({ text, href }: ExternalLinkProps) => {
+const ExternalLink = ({ href, text }: ExternalLinkProps) => {
   const [isHovering, setIsHovering] = useState<boolean>(false);
 
   return (
@@ -30,8 +29,12 @@ const ExternalLink = ({ text, href }: ExternalLinkProps) => {
       <ExternalOutboundLink
         aria-label={text}
         href={href}
-        onMouseEnter={() => setIsHovering(true)}
-        onMouseLeave={() => setIsHovering(false)}
+        onMouseEnter={() => {
+          setIsHovering(true);
+        }}
+        onMouseLeave={() => {
+          setIsHovering(false);
+        }}
         rel="noreferrer"
         target="_blank"
       >
