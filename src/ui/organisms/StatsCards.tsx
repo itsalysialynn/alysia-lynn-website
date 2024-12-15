@@ -6,18 +6,8 @@ import fadeInUpAnimation from '../atoms/fadeInUpAnimation';
 import mediaQueries from '../atoms/mediaQueries';
 import Theme from '../themes/Theme';
 
-const CounterNumber = styled.h2`
+const CounterNumber = styled.h1`
   color: ${colors.king};
-  font-size: 5rem;
-  font-weight: 800;
-
-  ${mediaQueries.tablet`
-    font-size: 4rem;
-  `}
-
-  ${mediaQueries.mobile`
-    font-size: 4rem;
-  `}
 `;
 
 type CardProps = {
@@ -52,7 +42,7 @@ const StatsLayout = styled.div`
   `}
 
   ${mediaQueries.tablet`
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   `} 
   
   ${mediaQueries.laptop`
