@@ -1,55 +1,36 @@
-import React, { useCallback, useEffect } from 'react';
-import styled, { keyframes } from 'styled-components';
+import React, { useState, useEffect } from 'react';
+import { keyframes, styled } from 'styled-components';
 
-const animation = keyframes`
-  0% { opacity: 0;  }
-  25% { opacity: .25;  }
-  50% { opacity: .75; }
+const fadeAnimation = keyframes`
+  0% { opacity: 0; }
+  25% { opacity: 0.25; }
+  50% { opacity: 0.75; }
   75% { opacity: 1; }
-  80% { opacity: .75; }
+  80% { opacity: 0.75; }
   100% { opacity: 0; }
 `;
 
 const Text = styled.span`
   opacity: 0;
-  animation-name: ${animation};
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
+  animation: ${fadeAnimation} 3s ease-in-out infinite;
 `;
 
 type TextLoopProps = {
   textArray: string[];
 };
 
-const TextLoop = ({ textArray }: TextLoopProps) => {
-  const setText = (text) => {
-    const element = document.getElementById('text');
-    if (element) {
-      element.innerHTML = text;
-    }
-  };
-
-  const loopText = useCallback(() => {
-    let displayIndex = 0;
-    const delay = 3000;
-
-    setInterval(() => {
-      setText(textArray[displayIndex]);
-
-      displayIndex++;
-
-      if (displayIndex >= textArray.length) {
-        displayIndex = 0;
-      }
-    }, delay);
-  }, [textArray]);
+const TextLoop: React.FC<TextLoopProps> = ({ textArray }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
-    setText(textArray[textArray.length - 1]);
-    loopText();
-  }, [loopText, textArray]);
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % textArray.length);
+    }, 3000);
 
-  return <Text id="text" />;
+    return () => clearInterval(interval); // Cleanup on unmount
+  }, [textArray]);
+
+  return <Text>{textArray[currentIndex]}</Text>;
 };
 
 export default TextLoop;
