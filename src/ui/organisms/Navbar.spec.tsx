@@ -1,12 +1,9 @@
-import React from 'react';
 import { screen } from '@testing-library/react';
-
 import renderWithProviders from '../../jest/renderWithProviders';
-
 import Navbar from './Navbar';
 
 describe('Navbar', () => {
-  it('should display the black logo when systems color scheme is not dark', async () => {
+  it('should display the black logo when systems color scheme is not dark', () => {
     Object.defineProperty(window, 'matchMedia', {
       value: jest.fn().mockImplementation(() => ({
         addEventListener: jest.fn(),
@@ -21,7 +18,7 @@ describe('Navbar', () => {
     expect(screen.findByAltText('Alysia Lynn White Logo')).toBeDefined();
   });
 
-  it('should display the black logo when systems color scheme is dark', async () => {
+  it('should display the black logo when systems color scheme is dark', () => {
     Object.defineProperty(window, 'matchMedia', {
       value: jest.fn().mockImplementation(() => ({
         addEventListener: jest.fn(),

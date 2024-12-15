@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from 'react';
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import { OutboundLink } from 'gatsby-plugin-google-analytics';
-import styled from 'styled-components';
-
+import React, { useEffect, useState } from 'react';
+import { styled } from 'styled-components';
 import Envelope from '../atoms/icons/Envelope';
 import Github from '../atoms/icons/Github';
 import Linkedin from '../atoms/icons/Linkedin';
@@ -17,7 +16,7 @@ type NavbarLayoutProps = {
 };
 
 const NavbarLayout = styled.nav<NavbarLayoutProps>`
-  background-color: ${({ theme, isTopOfPage }) =>
+  background-color: ${({ isTopOfPage, theme }) =>
     isTopOfPage ? theme.backgroundColor : theme.nav.backgroundColor};
   left: 0;
   position: fixed;
@@ -93,9 +92,13 @@ const Navbar = () => {
   const [isTopOfPage, setIsTopOfPage] = useState(true);
 
   useEffect(() => {
-    const onScroll = () => setIsTopOfPage(window.scrollY === 0);
+    const onScroll = () => {
+      setIsTopOfPage(window.scrollY === 0);
+    };
     window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+    };
   }, []);
 
   return (

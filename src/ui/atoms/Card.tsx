@@ -1,8 +1,6 @@
 import React, { ReactNode } from 'react';
-import styled from 'styled-components';
-
+import { styled } from 'styled-components';
 import Theme from '../themes/Theme';
-
 import mediaQueries from './mediaQueries';
 
 type CardLayoutProps = {

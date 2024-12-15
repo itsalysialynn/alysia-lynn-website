@@ -1,6 +1,5 @@
 import React, { ReactNode } from 'react';
-import styled, { ThemeProvider } from 'styled-components';
-
+import { styled, ThemeProvider } from 'styled-components';
 import AppHelmet from '../AppHelmet';
 import useTheme from '../hooks/useTheme';
 import GlobalStyle from '../ui/atoms/GlobalStyle';
@@ -36,11 +35,11 @@ type LayoutProps = {
   children: ReactNode;
   description?: string | undefined | null;
   robotMetaContent?: string | undefined | null;
-  title?: string | undefined | null;
   schemaMarkup?: object;
+  title?: string | undefined | null;
 };
 
-const Layout = ({ children, description, robotMetaContent, title, schemaMarkup }: LayoutProps) => {
+const Layout = ({ children, description, robotMetaContent, schemaMarkup, title }: LayoutProps) => {
   const { isDarkTheme, theme } = useTheme();
   return (
     <>
@@ -63,13 +62,6 @@ const Layout = ({ children, description, robotMetaContent, title, schemaMarkup }
       </PageWrapper>
     </>
   );
-};
-
-Layout.defaultProps = {
-  description: undefined,
-  robotMetaContent: undefined,
-  schemaMarkup: {},
-  title: undefined,
 };
 
 export default Layout;

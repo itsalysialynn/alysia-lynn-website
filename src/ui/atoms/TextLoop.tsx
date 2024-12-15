@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { keyframes, styled } from 'styled-components';
 
 const fadeAnimation = keyframes`
@@ -27,7 +27,9 @@ const TextLoop: React.FC<TextLoopProps> = ({ textArray }) => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % textArray.length);
     }, 3000);
 
-    return () => clearInterval(interval); // Cleanup on unmount
+    return () => {
+      clearInterval(interval);
+    };
   }, [textArray]);
 
   return <Text>{textArray[currentIndex]}</Text>;
