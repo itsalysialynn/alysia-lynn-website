@@ -27,12 +27,12 @@ const GlobalStyle = createGlobalStyle<GlobalStyleProps>`
       margin: 0;
 
       ${mediaQueries.mobile`
-        font-size: 2.75rem;
+        font-size: 2rem;
         font-weight: 800;
       `}
 
       ${mediaQueries.tablet`
-        font-size: 4rem;
+        font-size: 3rem;
         font-weight: 800;
       `}
     }

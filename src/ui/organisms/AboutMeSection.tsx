@@ -9,19 +9,25 @@ import TextLoop from '../atoms/TextLoop';
 import StatsCards from './StatsCards';
 
 const AboutMeSectionDesktopLayout = styled(Section)`
-  min-height: 100vh;
   ${mediaQueries.mobile`
+    min-height: 70vh;
     text-align: center;
   `}
+
   ${mediaQueries.tablet`
     padding: 15vh 0;
     text-align: center;
+    min-height: 100vh;
   `}
+  
   ${mediaQueries.laptop`
     padding: 15vh 0;
+    min-height: 100vh;
   `} 
+  
   ${mediaQueries.desktop`
     padding: 25vh 0;
+    min-height: 100vh;
   `};
 `;
 
