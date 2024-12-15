@@ -1,9 +1,23 @@
+import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { graphql, Script, useStaticQuery } from 'gatsby';
-
 import colors from './ui/atoms/colors';
 import googleTagManager from './vendor/googleTagManager';
+
+type SiteMetadata = {
+  author: string;
+  description: string;
+  image: string;
+  siteUrl: string;
+  title: string;
+  twitterImage: string;
+};
+
+type SiteQueryResult = {
+  site: {
+    siteMetadata: SiteMetadata;
+  };
+};
 
 const meta = (
   description: string,
@@ -35,7 +49,7 @@ const meta = (
   { content: author, property: 'article:author' },
 
   { content: 'website', property: 'og:type' },
-  { content: siteUrl, property: 'or:url' },
+  { content: siteUrl, property: 'og:url' },
 ];
 
 const link = [
@@ -64,14 +78,14 @@ const link = [
 ];
 
 type AppHelmetProps = {
-  description?: string | undefined | null;
-  title?: string | undefined | null;
-  robotMetaContent?: string | undefined | null;
+  description?: string | null;
+  robotMetaContent?: string | null;
   schemaMarkup?: object;
+  title?: string | null;
 };
 
-const AppHelmet = ({ description, title, robotMetaContent, schemaMarkup }: AppHelmetProps) => {
-  const data = useStaticQuery(graphql`
+const AppHelmet = ({ description, robotMetaContent, schemaMarkup, title }: AppHelmetProps) => {
+  const data = useStaticQuery<SiteQueryResult>(graphql`
     query {
       site {
         siteMetadata {
@@ -87,12 +101,12 @@ const AppHelmet = ({ description, title, robotMetaContent, schemaMarkup }: AppHe
   `);
 
   const {
-    title: defaultTitle,
+    author,
     description: defaultDescription,
     image,
-    twitterImage,
     siteUrl,
-    author,
+    title: defaultTitle,
+    twitterImage,
   } = data.site.siteMetadata;
 
   return (
@@ -101,35 +115,28 @@ const AppHelmet = ({ description, title, robotMetaContent, schemaMarkup }: AppHe
       htmlAttributes={{ lang: 'en' }}
       link={link}
       meta={meta(
-        description || defaultDescription,
+        description ?? defaultDescription,
         image,
-        title || defaultTitle,
-        robotMetaContent || 'index, follow',
+        title ?? defaultTitle,
+        robotMetaContent ?? 'index, follow',
         siteUrl,
         twitterImage,
         author,
       )}
-      title={title || defaultTitle}
+      title={title ?? defaultTitle}
     >
       {/* Google AdSense */}
-      <Script
+      <script
         async
         crossOrigin="anonymous"
         src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9874368117841257"
       />
       {/* Google Tag Manager */}
-      <Script async src="https://www.googletagmanager.com/gtag/js?id=G-4EFRB93JTC" />
-      <Script defer>{googleTagManager()}</Script>
-      {schemaMarkup && <Script type="application/ld+json">{JSON.stringify(schemaMarkup)}</Script>}
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-4EFRB93JTC" />
+      <script defer>{googleTagManager()}</script>
+      {schemaMarkup && <script type="application/ld+json">{JSON.stringify(schemaMarkup)}</script>}
     </Helmet>
   );
-};
-
-AppHelmet.defaultProps = {
-  description: undefined,
-  robotMetaContent: undefined,
-  schemaMarkup: undefined,
-  title: undefined,
 };
 
 export default AppHelmet;

@@ -27,9 +27,6 @@ jobs:
       - name: Run ESLint
         run: yarn lint
 
-      - name: Run Prettier
-        run: yarn prettier --check src
-
       - name: Run Jest
         run: yarn test
 

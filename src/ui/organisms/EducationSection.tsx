@@ -1,7 +1,6 @@
 import React from 'react';
-import styled from 'styled-components';
+import { styled } from 'styled-components';
 import widont from 'widont';
-
 import educationHistory from '../../data/educationHistory';
 import formatYearRange from '../../helpers/formatYearRange';
 import Card from '../atoms/Card';
@@ -16,7 +15,7 @@ const EducationSection = () => (
   <EducationSectionLayout id="education">
     <h2>Education</h2>
     {educationHistory.map(
-      ({ course, courseHref, endYear, school, startYear, description }, index) => (
+      ({ course, courseHref, description, endYear, school, startYear }, index) => (
         <Card key={index} header={school} yearRange={formatYearRange(startYear, endYear)}>
           <ExternalLink href={courseHref} text={course} />
           <p>{widont(description)}</p>

@@ -1,7 +1,6 @@
 import React from 'react';
 import CountUp from 'react-countup';
-import styled from 'styled-components';
-
+import { styled } from 'styled-components';
 import colors from '../atoms/colors';
 import fadeInUpAnimation from '../atoms/fadeInUpAnimation';
 import mediaQueries from '../atoms/mediaQueries';

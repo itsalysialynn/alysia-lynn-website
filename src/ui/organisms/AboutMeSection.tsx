@@ -1,13 +1,11 @@
 import React from 'react';
-import styled from 'styled-components';
-
+import { styled } from 'styled-components';
 import factsAboutMe from '../../data/factsAboutMe';
 import colors from '../atoms/colors';
 import fadeInUpAnimation from '../atoms/fadeInUpAnimation';
 import mediaQueries from '../atoms/mediaQueries';
 import Section from '../atoms/Section';
 import TextLoop from '../atoms/TextLoop';
-
 import StatsCards from './StatsCards';
 
 const AboutMeSectionDesktopLayout = styled(Section)`
@@ -55,7 +53,7 @@ const IntroTextLoop = styled.h2`
 const AboutMeSection = () => (
   <AboutMeSectionDesktopLayout id="about">
     <div>
-      <IntroText>Hi, I'm Alysia Lynn, </IntroText>
+      <IntroText>Hi, I&apos;m Alysia Lynn, </IntroText>
       <IntroTextLoop>
         and I <TextLoop textArray={factsAboutMe} />
       </IntroTextLoop>

@@ -1,6 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
-
+import { styled } from 'styled-components';
 import employmentHistory from '../../data/employmentHistory';
 import formatYearRange from '../../helpers/formatYearRange';
 import Card from '../atoms/Card';
@@ -17,7 +16,7 @@ const EmploymentSection = () => (
     <EmploymentSectionLayout>
       <h2>Employment History</h2>
       {employmentHistory.map(
-        ({ company, companyHref, endYear, startYear, title, accomplishments }, index) => (
+        ({ accomplishments, company, companyHref, endYear, startYear, title }, index) => (
           <Card key={index} header={title} yearRange={formatYearRange(startYear, endYear)}>
             <ExternalLink href={companyHref} text={company} />
             <ul>

@@ -1,5 +1,8 @@
 type Theme = {
   backgroundColor: string;
+  card: {
+    backgroundColor: string;
+  };
   color: string;
   hyperlink: {
     color: string;
@@ -9,9 +12,6 @@ type Theme = {
   };
   section: {
     borderColor: string;
-  };
-  card: {
-    backgroundColor: string;
   };
 };
 
