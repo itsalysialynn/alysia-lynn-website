@@ -60,7 +60,7 @@
     "babel-plugin-styled-components": "^2.1.4",
     "babel-preset-gatsby": "^3.14.0",
     "core-js": "^3.39.0",
-    "eslint": "^8.57.1",
+    "eslint": "^9.17.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-import-resolver-typescript": "^3.7.0",
     "eslint-plugin-import": "^2.31.0",
