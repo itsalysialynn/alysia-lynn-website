@@ -4195,12 +4195,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^22.10.2":
-  version: 22.10.2
-  resolution: "@types/node@npm:22.10.2"
+"@types/node@npm:^22.13.4":
+  version: 22.13.4
+  resolution: "@types/node@npm:22.13.4"
   dependencies:
     undici-types: "npm:~6.20.0"
-  checksum: 10/451adfefed4add58b069407173e616220fd4aaa3307cdde1bb701aa053b65b54ced8483db2f870dcedec7a58cb3b06101fbc19d85852716672ec1fd3660947fa
+  checksum: 10/716e05b1b84d9da3b2cbba9f642d7294549a89c85d27148b48815f321e0081d0546366e97d11c7710a3280160828512eb945f4e9361dda980f708473758ac0a7
   languageName: node
   linkType: hard
 
@@ -5116,13 +5116,13 @@ __metadata:
     "@testing-library/jest-dom": "npm:^6.6.3"
     "@testing-library/react": "npm:^16.1.0"
     "@types/jest": "npm:^29.5.14"
-    "@types/node": "npm:^22.10.2"
+    "@types/node": "npm:^22.13.4"
     "@types/react": "npm:^19.0.1"
     "@typescript-eslint/eslint-plugin": "npm:^8.24.1"
     "@typescript-eslint/parser": "npm:^8.19.1"
     babel-plugin-styled-components: "npm:^2.1.4"
     babel-preset-gatsby: "npm:^3.14.0"
-    core-js: "npm:^3.39.0"
+    core-js: "npm:^3.40.0"
     eslint: "npm:^8.57.1"
     eslint-config-prettier: "npm:^9.1.0"
     eslint-import-resolver-typescript: "npm:^3.7.0"
@@ -5159,9 +5159,9 @@ __metadata:
     react-helmet: "npm:^6.1.0"
     react-helmet-async: "npm:^2.0.5"
     react-is: "npm:^19.0.0"
-    styled-components: "npm:^6.1.13"
+    styled-components: "npm:^6.1.15"
     ts-jest: "npm:^29.2.5"
-    typescript: "npm:^5.7.2"
+    typescript: "npm:^5.7.3"
     widont: "npm:^0.4.0"
   languageName: unknown
   linkType: soft
@@ -7136,10 +7136,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"core-js@npm:^3.31.0, core-js@npm:^3.39.0":
+"core-js@npm:^3.31.0":
   version: 3.39.0
   resolution: "core-js@npm:3.39.0"
   checksum: 10/a3d34e669783dfc878e545f1983f60d9ff48a3867cd1d7ff8839b849e053002a208c7c14a5ca354b8e0b54982901e2f83dc87c3d9b95de0a94b4071d1c74e5f6
+  languageName: node
+  linkType: hard
+
+"core-js@npm:^3.40.0":
+  version: 3.40.0
+  resolution: "core-js@npm:3.40.0"
+  checksum: 10/9c7e7d2839db6c3c7b72725a3ce5edf6dd61fc771e1551e08b5622ca7da330f2f5d3c7dcd6a6e7889baa8d4cc5a909ba75b4add0d1f3da940a2a60a3e0603be5
   languageName: node
   linkType: hard
 
@@ -16645,7 +16652,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"picocolors@npm:^1.1.0":
+"picocolors@npm:^1.1.0, picocolors@npm:^1.1.1":
   version: 1.1.1
   resolution: "picocolors@npm:1.1.1"
   checksum: 10/e1cf46bf84886c79055fdfa9dcb3e4711ad259949e3565154b004b260cd356c5d54b31a1437ce9782624bf766272fe6b0154f5f0c744fb7af5d454d2b60db045
@@ -17087,14 +17094,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:8.4.38":
-  version: 8.4.38
-  resolution: "postcss@npm:8.4.38"
+"postcss@npm:8.4.49":
+  version: 8.4.49
+  resolution: "postcss@npm:8.4.49"
   dependencies:
     nanoid: "npm:^3.3.7"
-    picocolors: "npm:^1.0.0"
-    source-map-js: "npm:^1.2.0"
-  checksum: 10/6e44a7ed835ffa9a2b096e8d3e5dfc6bcf331a25c48aeb862dd54e3aaecadf814fa22be224fd308f87d08adf2299164f88c5fd5ab1c4ef6cbd693ceb295377f4
+    picocolors: "npm:^1.1.1"
+    source-map-js: "npm:^1.2.1"
+  checksum: 10/28fe1005b1339870e0a5006375ba5ac1213fd69800f79e7db09c398e074421ba6e162898e94f64942fed554037fd292db3811d87835d25ab5ef7f3c9daacb6ca
   languageName: node
   linkType: hard
 
@@ -19106,7 +19113,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"source-map-js@npm:^1.2.0":
+"source-map-js@npm:^1.2.1":
   version: 1.2.1
   resolution: "source-map-js@npm:1.2.1"
   checksum: 10/ff9d8c8bf096d534a5b7707e0382ef827b4dd360a577d3f34d2b9f48e12c9d230b5747974ee7c607f0df65113732711bb701fe9ece3c7edbd43cb2294d707df3
@@ -19673,23 +19680,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"styled-components@npm:^6.1.13":
-  version: 6.1.13
-  resolution: "styled-components@npm:6.1.13"
+"styled-components@npm:^6.1.15":
+  version: 6.1.15
+  resolution: "styled-components@npm:6.1.15"
   dependencies:
     "@emotion/is-prop-valid": "npm:1.2.2"
     "@emotion/unitless": "npm:0.8.1"
     "@types/stylis": "npm:4.2.5"
     css-to-react-native: "npm:3.2.0"
     csstype: "npm:3.1.3"
-    postcss: "npm:8.4.38"
+    postcss: "npm:8.4.49"
     shallowequal: "npm:1.1.0"
     stylis: "npm:4.3.2"
     tslib: "npm:2.6.2"
   peerDependencies:
     react: ">= 16.8.0"
     react-dom: ">= 16.8.0"
-  checksum: 10/8be7bcb156945e876f560b1bef4f2e5a6a214e53fa6e7f98cd7294c83f3cfb2d712c4561d175abcd6d331a65ef5b9b2004c916aa035ddec9633f0661d9c8205c
+  checksum: 10/54b70e40baa94b99e2a01945bd0589dabd356fb0a5a6d503372d5e920db27444564f4fb9a137423c0a65bd7c1a4e1024a44a6b2c7b162ae5daf2b042f9dc086d
   languageName: node
   linkType: hard
 
@@ -20503,23 +20510,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:^5.7.2":
-  version: 5.7.2
-  resolution: "typescript@npm:5.7.2"
+"typescript@npm:^5.7.3":
+  version: 5.7.3
+  resolution: "typescript@npm:5.7.3"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 10/4caa3904df69db9d4a8bedc31bafc1e19ffb7b24fbde2997a1633ae1398d0de5bdbf8daf602ccf3b23faddf1aeeb9b795223a2ed9c9a4fdcaf07bfde114a401a
+  checksum: 10/6a7e556de91db3d34dc51cd2600e8e91f4c312acd8e52792f243c7818dfadb27bae677175fad6947f9c81efb6c57eb6b2d0c736f196a6ee2f1f7d57b74fc92fa
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@npm%3A^5.7.2#optional!builtin<compat/typescript>":
-  version: 5.7.2
-  resolution: "typescript@patch:typescript@npm%3A5.7.2#optional!builtin<compat/typescript>::version=5.7.2&hash=5786d5"
+"typescript@patch:typescript@npm%3A^5.7.3#optional!builtin<compat/typescript>":
+  version: 5.7.3
+  resolution: "typescript@patch:typescript@npm%3A5.7.3#optional!builtin<compat/typescript>::version=5.7.3&hash=5786d5"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 10/d75ca10141afc64fd3474b41a8b082b640555bed388d237558aed64e5827ddadb48f90932c7f4205883f18f5bcab8b6a739a2cfac95855604b0dfeb34bc2f3eb
+  checksum: 10/dc58d777eb4c01973f7fbf1fd808aad49a0efdf545528dab9b07d94fdcb65b8751742804c3057e9619a4627f2d9cc85547fdd49d9f4326992ad0181b49e61d81
   languageName: node
   linkType: hard
 
