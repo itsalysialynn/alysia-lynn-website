@@ -2,7 +2,6 @@ import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import React, { useEffect, useState } from 'react';
 import { styled } from 'styled-components';
-import Envelope from '../atoms/icons/Envelope';
 import Github from '../atoms/icons/Github';
 import Linkedin from '../atoms/icons/Linkedin';
 import mediaQueries from '../atoms/mediaQueries';
