@@ -104,13 +104,15 @@ const Navbar = () => {
   return (
     <NavbarLayout isTopOfPage={isTopOfPage}>
       <NavigationItems>
+        <AnchorLink title="About" to="/#about">
+          About
+        </AnchorLink>
         <AnchorLink title="Employment" to="/#employment">
           Employment
         </AnchorLink>
         <AnchorLink title="Education" to="/#education">
           Education
         </AnchorLink>
-        <OutboundLink href="https://medium.com/@itsalysialynn">Blog</OutboundLink>
       </NavigationItems>
       <NavigationIcons>
         <NavIconOutboundLink
@@ -128,9 +130,6 @@ const Navbar = () => {
           target="_blank"
         >
           <Linkedin />
-        </NavIconOutboundLink>
-        <NavIconOutboundLink aria-label="Email Me" href="mailto:itsalysialynn@gmail.com">
-          <Envelope />
         </NavIconOutboundLink>
       </NavigationIcons>
     </NavbarLayout>
