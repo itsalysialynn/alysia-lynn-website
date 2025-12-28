@@ -10,7 +10,9 @@ type Employment = {
 
 const employmentHistory: Employment[] = [
   {
-    accomplishments: [],
+    accomplishments: [
+      'Engineered and delivered a production-grade mobile application for a next-generation digital health platform that analyzes real-world health data and community insights to help users discover meaningful wellness solutions',
+    ],
     company: 'Qi Health',
     companyHref: 'https://qi.health/',
     endYear: undefined,
