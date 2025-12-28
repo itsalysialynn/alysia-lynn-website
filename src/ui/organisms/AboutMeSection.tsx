@@ -3,32 +3,15 @@ import { styled } from 'styled-components';
 import factsAboutMe from '../../data/factsAboutMe';
 import colors from '../atoms/colors';
 import fadeInUpAnimation from '../atoms/fadeInUpAnimation';
-import mediaQueries from '../atoms/mediaQueries';
 import Section from '../atoms/Section';
 import TextLoop from '../atoms/TextLoop';
-import StatsCards from './StatsCards';
 
 const AboutMeSectionDesktopLayout = styled(Section)`
-  ${mediaQueries.mobile`
-    min-height: 70vh;
-    text-align: center;
-  `}
-
-  ${mediaQueries.tablet`
-    padding: 15vh 0;
-    text-align: center;
-    min-height: 100vh;
-  `}
-  
-  ${mediaQueries.laptop`
-    padding: 15vh 0;
-    min-height: 100vh;
-  `} 
-  
-  ${mediaQueries.desktop`
-    padding: 25vh 0;
-    min-height: 100vh;
-  `};
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 const IntroText = styled.h1`
@@ -64,7 +47,6 @@ const AboutMeSection = () => (
         and I <TextLoop textArray={factsAboutMe} />
       </IntroTextLoop>
     </div>
-    <StatsCards />
   </AboutMeSectionDesktopLayout>
 );
 
