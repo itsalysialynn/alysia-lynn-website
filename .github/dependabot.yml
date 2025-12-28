@@ -1,6 +1,29 @@
 version: 2
 updates:
+  - package-ecosystem: 'github-actions'
+    directory: '/'
+    schedule:
+      interval: 'weekly'
+    cooldown:
+      default-days: 5
+    rebase-strategy: 'disabled'
   - package-ecosystem: 'npm'
     directory: '/'
     schedule:
-      interval: 'daily'
+      interval: 'weekly'
+    versioning-strategy: increase
+    rebase-strategy: 'disabled'
+    groups:
+      gatsby-packages:
+        patterns:
+          - 'gatsby-*'
+      eslint-packages:
+        patterns:
+          - 'eslint'
+          - 'eslint-*'
+          - '@typescript-eslint/*'
+      testing-tools:
+        patterns:
+          - 'jest'
+          - 'ts-jest'
+          - '@testing-library/*'
