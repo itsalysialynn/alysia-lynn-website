@@ -23,10 +23,11 @@ jobs:
           aws-region: ${{ secrets.AWS_REGION }}
           role-to-assume: ${{ secrets.AWS_ROLE }}
 
-      - name: Install Node.js
-        uses: actions/setup-node@v4
+      - name: Set Up Node
+        uses: actions/setup-node@v6
         with:
           node-version-file: .nvmrc
+          cache: yarn
 
       - name: Install Dependencies
         run: yarn install --immutable
