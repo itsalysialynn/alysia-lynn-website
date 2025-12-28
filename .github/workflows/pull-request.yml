@@ -31,7 +31,7 @@ jobs:
         run: yarn test
 
       - name: Generate Jest Report
-        uses: dorny/test-reporter@v1
+        uses: dorny/test-reporter@v2
         if: failure() && !cancelled()
         with:
           name: Jest Test Report
