@@ -36,7 +36,7 @@ jobs:
         run: yarn build
 
       - name: Deploy
-        uses: jonelantha/gatsby-s3-action@v2
+        uses: jonelantha/gatsby-s3-action@v4
         with:
           dest-s3-bucket: alysia-lynn.com
           cloudfront-id-to-invalidate: ${{ secrets.CLOUDFRONT_ID }}
