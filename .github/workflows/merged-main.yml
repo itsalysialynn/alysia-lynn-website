@@ -15,18 +15,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v6
 
       - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v1
+        uses: aws-actions/configure-aws-credentials@v5
         with:
           aws-region: ${{ secrets.AWS_REGION }}
           role-to-assume: ${{ secrets.AWS_ROLE }}
 
-      - name: Install Node.js
-        uses: actions/setup-node@v4
+      - name: Set Up Node
+        uses: actions/setup-node@v6
         with:
           node-version-file: .nvmrc
+          cache: yarn
 
       - name: Install Dependencies
         run: yarn install --immutable
@@ -35,7 +36,7 @@ jobs:
         run: yarn build
 
       - name: Deploy
-        uses: jonelantha/gatsby-s3-action@v2
+        uses: jonelantha/gatsby-s3-action@v4
         with:
           dest-s3-bucket: alysia-lynn.com
           cloudfront-id-to-invalidate: ${{ secrets.CLOUDFRONT_ID }}
