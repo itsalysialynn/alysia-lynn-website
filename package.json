@@ -42,7 +42,7 @@
     "react-helmet": "^6.1.0",
     "react-helmet-async": "^2.0.5",
     "react-is": "^19.1.1",
-    "styled-components": "^6.1.15",
+    "styled-components": "^6.1.19",
     "widont": "^0.4.0"
   },
   "devDependencies": {
