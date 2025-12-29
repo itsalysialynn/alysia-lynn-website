@@ -15,6 +15,8 @@ export default tseslint.config(
       '.cache/**',
       'node_modules/**',
       '.yarn/**',
+      '.pnp.cjs',
+      '.pnp.loader.mjs',
       '*.d.ts',
       'eslint.config.mjs',
     ],
