@@ -1,21 +1,25 @@
-type Skill = {
-  icon: string;
-  name: string;
-};
-
 type Employment = {
   accomplishments: string[];
   company: string;
   companyHref: string;
   endYear: number | undefined;
   location: string;
-  logoFile: string;
-  skills: Skill[];
   startYear: number;
   title: string;
 };
 
 const employmentHistory: Employment[] = [
+  {
+    accomplishments: [
+      'Engineered and delivered a production-grade mobile application for a next-generation digital health platform that analyzes real-world health data and community insights to help users discover meaningful wellness solutions',
+    ],
+    company: 'Qi Health',
+    companyHref: 'https://qi.health/',
+    endYear: undefined,
+    location: 'Remote',
+    startYear: 2025,
+    title: 'Founding Software Engineer',
+  },
   {
     accomplishments: [
       'Developed a real-time cash flow management tool for Bench`s desktop and mobile app, resulting in an increase in daily active users.',
@@ -30,23 +34,8 @@ const employmentHistory: Employment[] = [
     ],
     company: 'Bench Accounting',
     companyHref: 'https://bench.co/',
-    endYear: undefined,
+    endYear: 2025,
     location: 'Vancouver, British Columbia, Canada',
-    logoFile: 'bench-logo.png',
-    skills: [
-      { icon: '', name: 'Amazon Web Services' },
-      { icon: '', name: 'AngularJS' },
-      { icon: '', name: 'CSS' },
-      { icon: '', name: 'GitHub Actions' },
-      { icon: '', name: 'Go' },
-      { icon: '', name: 'GraphQL' },
-      { icon: '', name: 'Java' },
-      { icon: '', name: 'Mentorship' },
-      { icon: '', name: 'React Native' },
-      { icon: '', name: 'React' },
-      { icon: '', name: 'Scala' },
-      { icon: '', name: 'Typescript' },
-    ],
     startYear: 2018,
     title: 'Software Engineer',
   },
@@ -59,16 +48,6 @@ const employmentHistory: Employment[] = [
     companyHref: 'https://www.lighthouselabs.ca/',
     endYear: 2022,
     location: 'Vancouver, British Columbia, Canada',
-    logoFile: 'lighthouse-logo.png',
-    skills: [
-      { icon: '', name: 'CSS' },
-      { icon: '', name: 'Javascript' },
-      { icon: '', name: 'Mentorship' },
-      { icon: '', name: 'React' },
-      { icon: '', name: 'Relational Database Design' },
-      { icon: '', name: 'Ruby on Rails' },
-      { icon: '', name: 'Ruby' },
-    ],
     startYear: 2020,
     title: 'Web Development Mentor',
   },
@@ -85,39 +64,8 @@ const employmentHistory: Employment[] = [
     companyHref: 'https://www.loft47.com/',
     endYear: 2018,
     location: 'Vancouver, British Columbia, Canada',
-    logoFile: 'loft-logo.png',
-    skills: [
-      { icon: '', name: 'React' },
-      { icon: '', name: 'CoffeeScript' },
-      { icon: '', name: 'Jest' },
-      { icon: '', name: 'CSS' },
-      { icon: '', name: 'Heroku' },
-      { icon: '', name: 'Javascript' },
-      { icon: '', name: 'Ruby on Rails' },
-    ],
     startYear: 2017,
     title: 'Software Developer',
-  },
-  {
-    accomplishments: [
-      'Answered inquiries via phone, live chat, and email.',
-      'Managed clients` accounts during their trial period and ensured top-level customer service.',
-      'Discussed complex bookkeeping and tax needs with clients to develop strategic solutions.',
-      'Exceeded monthly sales quota.',
-      'Contributed to th`e ongoing learning and success of the team through mentorship, collaboration, and training.',
-    ],
-    company: 'Bench Accounting',
-    companyHref: 'https://bench.co/',
-    endYear: 2017,
-    location: 'Vancouver, British Columbia, Canada',
-    logoFile: 'bench-logo.png',
-    skills: [
-      { icon: '', name: 'Sales' },
-      { icon: '', name: 'Coaching' },
-      { icon: '', name: 'Customer Service' },
-    ],
-    startYear: 2015,
-    title: 'Onboarding Specialist',
   },
 ];
 

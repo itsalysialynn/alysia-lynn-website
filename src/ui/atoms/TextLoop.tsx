@@ -3,16 +3,13 @@ import { keyframes, styled } from 'styled-components';
 
 const fadeAnimation = keyframes`
   0% { opacity: 0; }
-  25% { opacity: 0.25; }
-  50% { opacity: 0.75; }
-  75% { opacity: 1; }
-  80% { opacity: 0.75; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
   100% { opacity: 0; }
 `;
 
 const Text = styled.span`
-  opacity: 0;
-  animation: ${fadeAnimation} 3s ease-in-out infinite;
+  animation: ${fadeAnimation} 3s ease-in-out;
 `;
 
 type TextLoopProps = {
@@ -32,7 +29,7 @@ const TextLoop: React.FC<TextLoopProps> = ({ textArray }) => {
     };
   }, [textArray]);
 
-  return <Text>{textArray[currentIndex]}</Text>;
+  return <Text key={currentIndex}>{textArray[currentIndex]}</Text>;
 };
 
 export default TextLoop;
