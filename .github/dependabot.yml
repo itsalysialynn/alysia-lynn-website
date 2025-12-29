@@ -27,3 +27,8 @@ updates:
           - 'jest'
           - 'ts-jest'
           - '@testing-library/*'
+      babel-packages:
+        patterns:
+          - 'babel'
+          - 'babel-*'
+          - '@babel/*'
